@@ -1,0 +1,726 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		807BCD2228749C3500E1B489 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCD2128749C3500E1B489 /* AppDelegate.swift */; };
+		807BCD2428749C3500E1B489 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCD2328749C3500E1B489 /* SceneDelegate.swift */; };
+		807BCD2628749C3500E1B489 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCD2528749C3500E1B489 /* ViewController.swift */; };
+		807BCD2928749C3500E1B489 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807BCD2728749C3500E1B489 /* Main.storyboard */; };
+		807BCD2B28749C3600E1B489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 807BCD2A28749C3600E1B489 /* Assets.xcassets */; };
+		807BCD2E28749C3600E1B489 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807BCD2C28749C3600E1B489 /* LaunchScreen.storyboard */; };
+		807BCD3928749C3600E1B489 /* Vegetarian_Food_FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCD3828749C3600E1B489 /* Vegetarian_Food_FinderTests.swift */; };
+		807BCD4328749C3600E1B489 /* Vegetarian_Food_FinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCD4228749C3600E1B489 /* Vegetarian_Food_FinderUITests.swift */; };
+		807BCD4528749C3600E1B489 /* Vegetarian_Food_FinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCD4428749C3600E1B489 /* Vegetarian_Food_FinderUITestsLaunchTests.swift */; };
+		AF9B9046A2B910C71253B577 /* Pods_Vegetarian_Food_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78725B133AC78BAC4D2F531 /* Pods_Vegetarian_Food_Finder.framework */; };
+		BA98D7485B4D91F129959175 /* Pods_Vegetarian_Food_FinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3307CE68F31A3F61EE5185A1 /* Pods_Vegetarian_Food_FinderTests.framework */; };
+		D299929A6F9361371096A017 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8555C76732D8A73D1157FB88 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		807BCD3528749C3600E1B489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 807BCD1628749C3500E1B489 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 807BCD1D28749C3500E1B489;
+			remoteInfo = "Vegetarian-Food-Finder";
+		};
+		807BCD3F28749C3600E1B489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 807BCD1628749C3500E1B489 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 807BCD1D28749C3500E1B489;
+			remoteInfo = "Vegetarian-Food-Finder";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13653AA0BAA705E3F84AB867 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D441531D7CB7033481A961E /* Pods-Vegetarian-Food-FinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vegetarian-Food-FinderTests.release.xcconfig"; path = "Target Support Files/Pods-Vegetarian-Food-FinderTests/Pods-Vegetarian-Food-FinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		3307CE68F31A3F61EE5185A1 /* Pods_Vegetarian_Food_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vegetarian_Food_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76D4C262E561E2420619663B /* Pods-Vegetarian-Food-FinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vegetarian-Food-FinderTests.debug.xcconfig"; path = "Target Support Files/Pods-Vegetarian-Food-FinderTests/Pods-Vegetarian-Food-FinderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		807BCD1E28749C3500E1B489 /* Vegetarian-Food-Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vegetarian-Food-Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		807BCD2128749C3500E1B489 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		807BCD2328749C3500E1B489 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		807BCD2528749C3500E1B489 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		807BCD2828749C3500E1B489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		807BCD2A28749C3600E1B489 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		807BCD2D28749C3600E1B489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		807BCD2F28749C3600E1B489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		807BCD3428749C3600E1B489 /* Vegetarian-Food-FinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vegetarian-Food-FinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		807BCD3828749C3600E1B489 /* Vegetarian_Food_FinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vegetarian_Food_FinderTests.swift; sourceTree = "<group>"; };
+		807BCD3E28749C3600E1B489 /* Vegetarian-Food-FinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vegetarian-Food-FinderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		807BCD4228749C3600E1B489 /* Vegetarian_Food_FinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vegetarian_Food_FinderUITests.swift; sourceTree = "<group>"; };
+		807BCD4428749C3600E1B489 /* Vegetarian_Food_FinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vegetarian_Food_FinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8555C76732D8A73D1157FB88 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A78725B133AC78BAC4D2F531 /* Pods_Vegetarian_Food_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vegetarian_Food_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD8B2C4C2E1AFCFDED35A705 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.release.xcconfig"; path = "Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E34BB2B29BF7FEBB3659BAD8 /* Pods-Vegetarian-Food-Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vegetarian-Food-Finder.debug.xcconfig"; path = "Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder.debug.xcconfig"; sourceTree = "<group>"; };
+		F9CE9511DF2FCF4CB6F7D841 /* Pods-Vegetarian-Food-Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vegetarian-Food-Finder.release.xcconfig"; path = "Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		807BCD1B28749C3500E1B489 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF9B9046A2B910C71253B577 /* Pods_Vegetarian_Food_Finder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807BCD3128749C3600E1B489 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA98D7485B4D91F129959175 /* Pods_Vegetarian_Food_FinderTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807BCD3B28749C3600E1B489 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D299929A6F9361371096A017 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6DB3553C5B42076EE9BB3038 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E34BB2B29BF7FEBB3659BAD8 /* Pods-Vegetarian-Food-Finder.debug.xcconfig */,
+				F9CE9511DF2FCF4CB6F7D841 /* Pods-Vegetarian-Food-Finder.release.xcconfig */,
+				13653AA0BAA705E3F84AB867 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.debug.xcconfig */,
+				DD8B2C4C2E1AFCFDED35A705 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.release.xcconfig */,
+				76D4C262E561E2420619663B /* Pods-Vegetarian-Food-FinderTests.debug.xcconfig */,
+				2D441531D7CB7033481A961E /* Pods-Vegetarian-Food-FinderTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		807BCD1528749C3500E1B489 = {
+			isa = PBXGroup;
+			children = (
+				807BCD2028749C3500E1B489 /* Vegetarian-Food-Finder */,
+				807BCD3728749C3600E1B489 /* Vegetarian-Food-FinderTests */,
+				807BCD4128749C3600E1B489 /* Vegetarian-Food-FinderUITests */,
+				807BCD1F28749C3500E1B489 /* Products */,
+				6DB3553C5B42076EE9BB3038 /* Pods */,
+				A45C51668B268BE195770338 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		807BCD1F28749C3500E1B489 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				807BCD1E28749C3500E1B489 /* Vegetarian-Food-Finder.app */,
+				807BCD3428749C3600E1B489 /* Vegetarian-Food-FinderTests.xctest */,
+				807BCD3E28749C3600E1B489 /* Vegetarian-Food-FinderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		807BCD2028749C3500E1B489 /* Vegetarian-Food-Finder */ = {
+			isa = PBXGroup;
+			children = (
+				807BCD2128749C3500E1B489 /* AppDelegate.swift */,
+				807BCD2328749C3500E1B489 /* SceneDelegate.swift */,
+				807BCD2528749C3500E1B489 /* ViewController.swift */,
+				807BCD2728749C3500E1B489 /* Main.storyboard */,
+				807BCD2A28749C3600E1B489 /* Assets.xcassets */,
+				807BCD2C28749C3600E1B489 /* LaunchScreen.storyboard */,
+				807BCD2F28749C3600E1B489 /* Info.plist */,
+			);
+			path = "Vegetarian-Food-Finder";
+			sourceTree = "<group>";
+		};
+		807BCD3728749C3600E1B489 /* Vegetarian-Food-FinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				807BCD3828749C3600E1B489 /* Vegetarian_Food_FinderTests.swift */,
+			);
+			path = "Vegetarian-Food-FinderTests";
+			sourceTree = "<group>";
+		};
+		807BCD4128749C3600E1B489 /* Vegetarian-Food-FinderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				807BCD4228749C3600E1B489 /* Vegetarian_Food_FinderUITests.swift */,
+				807BCD4428749C3600E1B489 /* Vegetarian_Food_FinderUITestsLaunchTests.swift */,
+			);
+			path = "Vegetarian-Food-FinderUITests";
+			sourceTree = "<group>";
+		};
+		A45C51668B268BE195770338 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A78725B133AC78BAC4D2F531 /* Pods_Vegetarian_Food_Finder.framework */,
+				8555C76732D8A73D1157FB88 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework */,
+				3307CE68F31A3F61EE5185A1 /* Pods_Vegetarian_Food_FinderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		807BCD1D28749C3500E1B489 /* Vegetarian-Food-Finder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 807BCD4828749C3600E1B489 /* Build configuration list for PBXNativeTarget "Vegetarian-Food-Finder" */;
+			buildPhases = (
+				AD09B66A7793DB253136C894 /* [CP] Check Pods Manifest.lock */,
+				807BCD1A28749C3500E1B489 /* Sources */,
+				807BCD1B28749C3500E1B489 /* Frameworks */,
+				807BCD1C28749C3500E1B489 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Vegetarian-Food-Finder";
+			productName = "Vegetarian-Food-Finder";
+			productReference = 807BCD1E28749C3500E1B489 /* Vegetarian-Food-Finder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		807BCD3328749C3600E1B489 /* Vegetarian-Food-FinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 807BCD4B28749C3600E1B489 /* Build configuration list for PBXNativeTarget "Vegetarian-Food-FinderTests" */;
+			buildPhases = (
+				8935FE0EB30FCAAEBC035BCE /* [CP] Check Pods Manifest.lock */,
+				807BCD3028749C3600E1B489 /* Sources */,
+				807BCD3128749C3600E1B489 /* Frameworks */,
+				807BCD3228749C3600E1B489 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				807BCD3628749C3600E1B489 /* PBXTargetDependency */,
+			);
+			name = "Vegetarian-Food-FinderTests";
+			productName = "Vegetarian-Food-FinderTests";
+			productReference = 807BCD3428749C3600E1B489 /* Vegetarian-Food-FinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		807BCD3D28749C3600E1B489 /* Vegetarian-Food-FinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 807BCD4E28749C3600E1B489 /* Build configuration list for PBXNativeTarget "Vegetarian-Food-FinderUITests" */;
+			buildPhases = (
+				F37998DB6F99C416AE76776D /* [CP] Check Pods Manifest.lock */,
+				807BCD3A28749C3600E1B489 /* Sources */,
+				807BCD3B28749C3600E1B489 /* Frameworks */,
+				807BCD3C28749C3600E1B489 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				807BCD4028749C3600E1B489 /* PBXTargetDependency */,
+			);
+			name = "Vegetarian-Food-FinderUITests";
+			productName = "Vegetarian-Food-FinderUITests";
+			productReference = 807BCD3E28749C3600E1B489 /* Vegetarian-Food-FinderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		807BCD1628749C3500E1B489 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					807BCD1D28749C3500E1B489 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					807BCD3328749C3600E1B489 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 807BCD1D28749C3500E1B489;
+					};
+					807BCD3D28749C3600E1B489 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 807BCD1D28749C3500E1B489;
+					};
+				};
+			};
+			buildConfigurationList = 807BCD1928749C3500E1B489 /* Build configuration list for PBXProject "Vegetarian-Food-Finder" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 807BCD1528749C3500E1B489;
+			productRefGroup = 807BCD1F28749C3500E1B489 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				807BCD1D28749C3500E1B489 /* Vegetarian-Food-Finder */,
+				807BCD3328749C3600E1B489 /* Vegetarian-Food-FinderTests */,
+				807BCD3D28749C3600E1B489 /* Vegetarian-Food-FinderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		807BCD1C28749C3500E1B489 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				807BCD2E28749C3600E1B489 /* LaunchScreen.storyboard in Resources */,
+				807BCD2B28749C3600E1B489 /* Assets.xcassets in Resources */,
+				807BCD2928749C3500E1B489 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807BCD3228749C3600E1B489 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807BCD3C28749C3600E1B489 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8935FE0EB30FCAAEBC035BCE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vegetarian-Food-FinderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD09B66A7793DB253136C894 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vegetarian-Food-Finder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F37998DB6F99C416AE76776D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		807BCD1A28749C3500E1B489 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				807BCD2628749C3500E1B489 /* ViewController.swift in Sources */,
+				807BCD2228749C3500E1B489 /* AppDelegate.swift in Sources */,
+				807BCD2428749C3500E1B489 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807BCD3028749C3600E1B489 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				807BCD3928749C3600E1B489 /* Vegetarian_Food_FinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807BCD3A28749C3600E1B489 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				807BCD4528749C3600E1B489 /* Vegetarian_Food_FinderUITestsLaunchTests.swift in Sources */,
+				807BCD4328749C3600E1B489 /* Vegetarian_Food_FinderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		807BCD3628749C3600E1B489 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 807BCD1D28749C3500E1B489 /* Vegetarian-Food-Finder */;
+			targetProxy = 807BCD3528749C3600E1B489 /* PBXContainerItemProxy */;
+		};
+		807BCD4028749C3600E1B489 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 807BCD1D28749C3500E1B489 /* Vegetarian-Food-Finder */;
+			targetProxy = 807BCD3F28749C3600E1B489 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		807BCD2728749C3500E1B489 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				807BCD2828749C3500E1B489 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		807BCD2C28749C3600E1B489 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				807BCD2D28749C3600E1B489 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		807BCD4628749C3600E1B489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		807BCD4728749C3600E1B489 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		807BCD4928749C3600E1B489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E34BB2B29BF7FEBB3659BAD8 /* Pods-Vegetarian-Food-Finder.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UCG4UQP97K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vegetarian-Food-Finder/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "AbdullaA.Vegetarian-Food-Finder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		807BCD4A28749C3600E1B489 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9CE9511DF2FCF4CB6F7D841 /* Pods-Vegetarian-Food-Finder.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UCG4UQP97K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vegetarian-Food-Finder/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "AbdullaA.Vegetarian-Food-Finder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		807BCD4C28749C3600E1B489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76D4C262E561E2420619663B /* Pods-Vegetarian-Food-FinderTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UCG4UQP97K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "AbdullaA.Vegetarian-Food-FinderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vegetarian-Food-Finder.app/Vegetarian-Food-Finder";
+			};
+			name = Debug;
+		};
+		807BCD4D28749C3600E1B489 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D441531D7CB7033481A961E /* Pods-Vegetarian-Food-FinderTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UCG4UQP97K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "AbdullaA.Vegetarian-Food-FinderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vegetarian-Food-Finder.app/Vegetarian-Food-Finder";
+			};
+			name = Release;
+		};
+		807BCD4F28749C3600E1B489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13653AA0BAA705E3F84AB867 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UCG4UQP97K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "AbdullaA.Vegetarian-Food-FinderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Vegetarian-Food-Finder";
+			};
+			name = Debug;
+		};
+		807BCD5028749C3600E1B489 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD8B2C4C2E1AFCFDED35A705 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UCG4UQP97K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "AbdullaA.Vegetarian-Food-FinderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Vegetarian-Food-Finder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		807BCD1928749C3500E1B489 /* Build configuration list for PBXProject "Vegetarian-Food-Finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				807BCD4628749C3600E1B489 /* Debug */,
+				807BCD4728749C3600E1B489 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		807BCD4828749C3600E1B489 /* Build configuration list for PBXNativeTarget "Vegetarian-Food-Finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				807BCD4928749C3600E1B489 /* Debug */,
+				807BCD4A28749C3600E1B489 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		807BCD4B28749C3600E1B489 /* Build configuration list for PBXNativeTarget "Vegetarian-Food-FinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				807BCD4C28749C3600E1B489 /* Debug */,
+				807BCD4D28749C3600E1B489 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		807BCD4E28749C3600E1B489 /* Build configuration list for PBXNativeTarget "Vegetarian-Food-FinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				807BCD4F28749C3600E1B489 /* Debug */,
+				807BCD5028749C3600E1B489 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 807BCD1628749C3500E1B489 /* Project object */;
+}

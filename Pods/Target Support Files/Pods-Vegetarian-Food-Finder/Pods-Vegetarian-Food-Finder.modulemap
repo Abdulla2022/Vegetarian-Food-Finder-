@@ -1,0 +1,6 @@
+framework module Pods_Vegetarian_Food_Finder {
+  umbrella header "Pods-Vegetarian-Food-Finder-umbrella.h"
+
+  export *
+  module * { export * }
+}

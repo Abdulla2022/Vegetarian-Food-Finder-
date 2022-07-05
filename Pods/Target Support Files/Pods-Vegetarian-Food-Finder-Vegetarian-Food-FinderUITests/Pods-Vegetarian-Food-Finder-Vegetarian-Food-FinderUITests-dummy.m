@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests : NSObject
+@end
+@implementation PodsDummy_Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests
+@end

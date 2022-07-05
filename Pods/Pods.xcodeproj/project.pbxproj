@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C3C1C24AE04681474DA41118C9684DB /* Pods-Vegetarian-Food-Finder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A539AB6818E4A5987E62784A5EA3FD /* Pods-Vegetarian-Food-Finder-dummy.m */; };
+		397A86BD37096CD4BE3DD36D3667D2A1 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A215D9CD4C7868EEFC950ED2DE6ED57 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-dummy.m */; };
+		5A87CC77FDCD11EFDED8490FB7D1ECDD /* Pods-Vegetarian-Food-FinderTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41266B8A826F7B4D15648B5007FD1E25 /* Pods-Vegetarian-Food-FinderTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		723CE696CAA3195DC081867D2EAE609F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		823D5F1A741629212DA95215B178437E /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CC7393D2EE3D0F2C543E7D9D8B3ED3D /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BBB30F5971C90DCCC9D9F0094E8F401 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		9C3B7669B35185839D021CAC60A9F146 /* Pods-Vegetarian-Food-Finder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB4902A7AF6E41427118ED44DC57D945 /* Pods-Vegetarian-Food-Finder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6453C324E9367FE3C6E20A1B06BD745 /* Pods-Vegetarian-Food-FinderTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD47121F88D3906809D6CB269735C57E /* Pods-Vegetarian-Food-FinderTests-dummy.m */; };
+		F50F566B9422DB777A06458D00FDDF9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		446A4A012D988B542D6EC0382534CC9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6E70B265E34E35F24267EA76319DA77;
+			remoteInfo = "Pods-Vegetarian-Food-Finder";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B58636B17387D22BD4779328196990A /* Pods-Vegetarian-Food-Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vegetarian-Food-Finder.debug.xcconfig"; sourceTree = "<group>"; };
+		2BFD27B44D73ACF3AD60899A3463F1FE /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2C70C7DE19ACB4A243B6263551B28B44 /* Pods-Vegetarian-Food-FinderTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vegetarian-Food-FinderTests-Info.plist"; sourceTree = "<group>"; };
+		3268F25026ACCD843C4A7FD941B80F94 /* Pods-Vegetarian-Food-Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vegetarian-Food-Finder.release.xcconfig"; sourceTree = "<group>"; };
+		3A0F572ACB91AE46F69EE15A8264C604 /* Pods-Vegetarian-Food-FinderTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vegetarian-Food-FinderTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		41266B8A826F7B4D15648B5007FD1E25 /* Pods-Vegetarian-Food-FinderTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Vegetarian-Food-FinderTests-umbrella.h"; sourceTree = "<group>"; };
+		41F7B337121B995B330DB0A4A1CFBCA0 /* Pods-Vegetarian-Food-Finder-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Vegetarian-Food-Finder-acknowledgements.markdown"; sourceTree = "<group>"; };
+		53A735A5C9EC5ED9CA40E858D6AEB3ED /* Pods-Vegetarian-Food-FinderTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Vegetarian-Food-FinderTests"; path = Pods_Vegetarian_Food_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DC643192D1A0DC469EA8350E26015F3 /* Pods-Vegetarian-Food-FinderTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Vegetarian-Food-FinderTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		64E1D6DFF3E7CD3F7C9B69167C6D9A8D /* Pods-Vegetarian-Food-Finder-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vegetarian-Food-Finder-acknowledgements.plist"; sourceTree = "<group>"; };
+		68A539AB6818E4A5987E62784A5EA3FD /* Pods-Vegetarian-Food-Finder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Vegetarian-Food-Finder-dummy.m"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7CC7393D2EE3D0F2C543E7D9D8B3ED3D /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-umbrella.h"; sourceTree = "<group>"; };
+		8F9F896830831AD2E3CE1D1A9304EDDE /* Pods-Vegetarian-Food-Finder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Vegetarian-Food-Finder.modulemap"; sourceTree = "<group>"; };
+		9A215D9CD4C7868EEFC950ED2DE6ED57 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AC532FCF579166FCB80A18BAE3DCC08B /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BB4902A7AF6E41427118ED44DC57D945 /* Pods-Vegetarian-Food-Finder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Vegetarian-Food-Finder-umbrella.h"; sourceTree = "<group>"; };
+		BBE49DED7BB91B42F6856A36341DDBA9 /* Pods-Vegetarian-Food-FinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vegetarian-Food-FinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		BF889E0D1E8585CEB6C28ACC2E4155D1 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.modulemap"; sourceTree = "<group>"; };
+		C74E831324227AA6228FD6B24A6DDBC7 /* Pods-Vegetarian-Food-Finder-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vegetarian-Food-Finder-Info.plist"; sourceTree = "<group>"; };
+		D200DD435B7AA1B774883301B106C7CF /* Pods-Vegetarian-Food-FinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vegetarian-Food-FinderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D465EFF0E271A4DA8931B94916FB469F /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D46F5E8FC0A563FE8CE9A9165971AA2D /* Pods-Vegetarian-Food-Finder */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Vegetarian-Food-Finder"; path = Pods_Vegetarian_Food_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5F19921557AA15F67F950B5436FB2E7 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-Info.plist"; sourceTree = "<group>"; };
+		D92773A5FAA162EF514481A4F71F3CBA /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DD47121F88D3906809D6CB269735C57E /* Pods-Vegetarian-Food-FinderTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Vegetarian-Food-FinderTests-dummy.m"; sourceTree = "<group>"; };
+		EC3D22BAF7831E160F5BC6E76C2A8E8E /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests"; path = Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6A0C40046EC99AAF651089A3E948775 /* Pods-Vegetarian-Food-FinderTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Vegetarian-Food-FinderTests.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30C18A5EFEF1F32A6E3CA9985175B40D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				723CE696CAA3195DC081867D2EAE609F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D0FF34985958E2017724385D39506A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BBB30F5971C90DCCC9D9F0094E8F401 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB1C274399C13AF97B2BA0D960D49570 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50F566B9422DB777A06458D00FDDF9F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13CF5F0A121BA725EA0371D7239825B0 /* Pods-Vegetarian-Food-FinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6A0C40046EC99AAF651089A3E948775 /* Pods-Vegetarian-Food-FinderTests.modulemap */,
+				5DC643192D1A0DC469EA8350E26015F3 /* Pods-Vegetarian-Food-FinderTests-acknowledgements.markdown */,
+				3A0F572ACB91AE46F69EE15A8264C604 /* Pods-Vegetarian-Food-FinderTests-acknowledgements.plist */,
+				DD47121F88D3906809D6CB269735C57E /* Pods-Vegetarian-Food-FinderTests-dummy.m */,
+				2C70C7DE19ACB4A243B6263551B28B44 /* Pods-Vegetarian-Food-FinderTests-Info.plist */,
+				41266B8A826F7B4D15648B5007FD1E25 /* Pods-Vegetarian-Food-FinderTests-umbrella.h */,
+				D200DD435B7AA1B774883301B106C7CF /* Pods-Vegetarian-Food-FinderTests.debug.xcconfig */,
+				BBE49DED7BB91B42F6856A36341DDBA9 /* Pods-Vegetarian-Food-FinderTests.release.xcconfig */,
+			);
+			name = "Pods-Vegetarian-Food-FinderTests";
+			path = "Target Support Files/Pods-Vegetarian-Food-FinderTests";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A288CC31178C176DA93EAD8437E0DCAE /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BF889E0D1E8585CEB6C28ACC2E4155D1 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.modulemap */,
+				D92773A5FAA162EF514481A4F71F3CBA /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-acknowledgements.markdown */,
+				2BFD27B44D73ACF3AD60899A3463F1FE /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-acknowledgements.plist */,
+				9A215D9CD4C7868EEFC950ED2DE6ED57 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-dummy.m */,
+				D5F19921557AA15F67F950B5436FB2E7 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-Info.plist */,
+				7CC7393D2EE3D0F2C543E7D9D8B3ED3D /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-umbrella.h */,
+				D465EFF0E271A4DA8931B94916FB469F /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.debug.xcconfig */,
+				AC532FCF579166FCB80A18BAE3DCC08B /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.release.xcconfig */,
+			);
+			name = "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests";
+			path = "Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests";
+			sourceTree = "<group>";
+		};
+		B26702507DEFD18AF6159F6644917227 /* Pods-Vegetarian-Food-Finder */ = {
+			isa = PBXGroup;
+			children = (
+				8F9F896830831AD2E3CE1D1A9304EDDE /* Pods-Vegetarian-Food-Finder.modulemap */,
+				41F7B337121B995B330DB0A4A1CFBCA0 /* Pods-Vegetarian-Food-Finder-acknowledgements.markdown */,
+				64E1D6DFF3E7CD3F7C9B69167C6D9A8D /* Pods-Vegetarian-Food-Finder-acknowledgements.plist */,
+				68A539AB6818E4A5987E62784A5EA3FD /* Pods-Vegetarian-Food-Finder-dummy.m */,
+				C74E831324227AA6228FD6B24A6DDBC7 /* Pods-Vegetarian-Food-Finder-Info.plist */,
+				BB4902A7AF6E41427118ED44DC57D945 /* Pods-Vegetarian-Food-Finder-umbrella.h */,
+				2B58636B17387D22BD4779328196990A /* Pods-Vegetarian-Food-Finder.debug.xcconfig */,
+				3268F25026ACCD843C4A7FD941B80F94 /* Pods-Vegetarian-Food-Finder.release.xcconfig */,
+			);
+			name = "Pods-Vegetarian-Food-Finder";
+			path = "Target Support Files/Pods-Vegetarian-Food-Finder";
+			sourceTree = "<group>";
+		};
+		C91CE58D969BDD1F84FD9BFC783CD6D0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B26702507DEFD18AF6159F6644917227 /* Pods-Vegetarian-Food-Finder */,
+				A288CC31178C176DA93EAD8437E0DCAE /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests */,
+				13CF5F0A121BA725EA0371D7239825B0 /* Pods-Vegetarian-Food-FinderTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				D517F79C15540F393075C98B72D27EDB /* Products */,
+				C91CE58D969BDD1F84FD9BFC783CD6D0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D517F79C15540F393075C98B72D27EDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D46F5E8FC0A563FE8CE9A9165971AA2D /* Pods-Vegetarian-Food-Finder */,
+				EC3D22BAF7831E160F5BC6E76C2A8E8E /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests */,
+				53A735A5C9EC5ED9CA40E858D6AEB3ED /* Pods-Vegetarian-Food-FinderTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		513DC7F79E157C6BFE4EF3ABC0553BBD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C3B7669B35185839D021CAC60A9F146 /* Pods-Vegetarian-Food-Finder-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		923D477E2E0FF2D9D55D4446BE5EF1EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A87CC77FDCD11EFDED8490FB7D1ECDD /* Pods-Vegetarian-Food-FinderTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A37D6994BF171D18499B66C899B031A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				823D5F1A741629212DA95215B178437E /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0086E232FFA73D1CB0F300F22AF99C01 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5858EA4566406848670DA5A0255EA867 /* Build configuration list for PBXNativeTarget "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests" */;
+			buildPhases = (
+				A37D6994BF171D18499B66C899B031A1 /* Headers */,
+				9DD208A22B05F779EF3473DC2743282C /* Sources */,
+				7D0FF34985958E2017724385D39506A8 /* Frameworks */,
+				F151CE3335AC4DA2CD729D277C7DB61C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests";
+			productName = Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests;
+			productReference = EC3D22BAF7831E160F5BC6E76C2A8E8E /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+		C6E70B265E34E35F24267EA76319DA77 /* Pods-Vegetarian-Food-Finder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC48775D36D148D94C2900FF4C268676 /* Build configuration list for PBXNativeTarget "Pods-Vegetarian-Food-Finder" */;
+			buildPhases = (
+				513DC7F79E157C6BFE4EF3ABC0553BBD /* Headers */,
+				F743D4665F0ACD6D1FD2593036677C87 /* Sources */,
+				FB1C274399C13AF97B2BA0D960D49570 /* Frameworks */,
+				6766A26C628BE8CD5B6FE14DEBC2EA0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Vegetarian-Food-Finder";
+			productName = Pods_Vegetarian_Food_Finder;
+			productReference = D46F5E8FC0A563FE8CE9A9165971AA2D /* Pods-Vegetarian-Food-Finder */;
+			productType = "com.apple.product-type.framework";
+		};
+		F1732298931B870C219EF8EDBFDB17D8 /* Pods-Vegetarian-Food-FinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8A8996030B9840640F6234820D8D83D /* Build configuration list for PBXNativeTarget "Pods-Vegetarian-Food-FinderTests" */;
+			buildPhases = (
+				923D477E2E0FF2D9D55D4446BE5EF1EE /* Headers */,
+				9CDD187D65D0EA4157EC61B674D449E8 /* Sources */,
+				30C18A5EFEF1F32A6E3CA9985175B40D /* Frameworks */,
+				42E637FB412B91898F17C3D8D8EE9358 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E63BE3C749D358A2548B2A270A5E8C6 /* PBXTargetDependency */,
+			);
+			name = "Pods-Vegetarian-Food-FinderTests";
+			productName = Pods_Vegetarian_Food_FinderTests;
+			productReference = 53A735A5C9EC5ED9CA40E858D6AEB3ED /* Pods-Vegetarian-Food-FinderTests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = D517F79C15540F393075C98B72D27EDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6E70B265E34E35F24267EA76319DA77 /* Pods-Vegetarian-Food-Finder */,
+				0086E232FFA73D1CB0F300F22AF99C01 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests */,
+				F1732298931B870C219EF8EDBFDB17D8 /* Pods-Vegetarian-Food-FinderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42E637FB412B91898F17C3D8D8EE9358 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6766A26C628BE8CD5B6FE14DEBC2EA0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F151CE3335AC4DA2CD729D277C7DB61C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9CDD187D65D0EA4157EC61B674D449E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6453C324E9367FE3C6E20A1B06BD745 /* Pods-Vegetarian-Food-FinderTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD208A22B05F779EF3473DC2743282C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				397A86BD37096CD4BE3DD36D3667D2A1 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F743D4665F0ACD6D1FD2593036677C87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3C1C24AE04681474DA41118C9684DB /* Pods-Vegetarian-Food-Finder-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4E63BE3C749D358A2548B2A270A5E8C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Vegetarian-Food-Finder";
+			target = C6E70B265E34E35F24267EA76319DA77 /* Pods-Vegetarian-Food-Finder */;
+			targetProxy = 446A4A012D988B542D6EC0382534CC9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09909ECBA13E8F70A928465E7F7A9A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		2593E3337C79831B011B1FDE2F69F5F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D200DD435B7AA1B774883301B106C7CF /* Pods-Vegetarian-Food-FinderTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Vegetarian-Food-FinderTests/Pods-Vegetarian-Food-FinderTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Vegetarian-Food-FinderTests/Pods-Vegetarian-Food-FinderTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2DE0D8898245310716431F92FA4989FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		55B881655B2C7B1AC90D424A953DAC24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B58636B17387D22BD4779328196990A /* Pods-Vegetarian-Food-Finder.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6C32DD5C76FDE58D6BDA05D0652C0A38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC532FCF579166FCB80A18BAE3DCC08B /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		94B1D2AEA329F829D6CEB51A08436A0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D465EFF0E271A4DA8931B94916FB469F /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C653F123827D8508443EB91C4861EAC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBE49DED7BB91B42F6856A36341DDBA9 /* Pods-Vegetarian-Food-FinderTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Vegetarian-Food-FinderTests/Pods-Vegetarian-Food-FinderTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Vegetarian-Food-FinderTests/Pods-Vegetarian-Food-FinderTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DE3F26EE1EE4F856F87C4DE2B4295F45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3268F25026ACCD843C4A7FD941B80F94 /* Pods-Vegetarian-Food-Finder.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09909ECBA13E8F70A928465E7F7A9A92 /* Debug */,
+				2DE0D8898245310716431F92FA4989FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5858EA4566406848670DA5A0255EA867 /* Build configuration list for PBXNativeTarget "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94B1D2AEA329F829D6CEB51A08436A0E /* Debug */,
+				6C32DD5C76FDE58D6BDA05D0652C0A38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8A8996030B9840640F6234820D8D83D /* Build configuration list for PBXNativeTarget "Pods-Vegetarian-Food-FinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2593E3337C79831B011B1FDE2F69F5F0 /* Debug */,
+				C653F123827D8508443EB91C4861EAC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC48775D36D148D94C2900FF4C268676 /* Build configuration list for PBXNativeTarget "Pods-Vegetarian-Food-Finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55B881655B2C7B1AC90D424A953DAC24 /* Debug */,
+				DE3F26EE1EE4F856F87C4DE2B4295F45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
