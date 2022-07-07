@@ -4,9 +4,11 @@
 //
 //  Created by Abdullahi Ahmed on 7/5/22.
 //
-import UIKit
-class SearchViewController: UIViewController {
 
+import UIKit
+
+final class SearchViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

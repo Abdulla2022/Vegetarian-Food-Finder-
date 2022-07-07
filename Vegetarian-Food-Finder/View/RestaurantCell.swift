@@ -5,7 +5,9 @@
 //  Created by Abdullahi Ahmed on 7/5/22.
 //
 import UIKit
-class ResturantCell: UITableViewCell {
+
+final class RestaurantCell: UITableViewCell {
+    
     @IBOutlet weak var nameOfResturant: UILabel!
     @IBOutlet weak var imageOfResturant: UIImageView!
     @IBOutlet weak var operatingHours: UILabel!

@@ -6,13 +6,17 @@
 //
 import UIKit
 import Parse
-class HomeViewController: UIViewController {
+
+final class HomeViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func DidTapLogOut(_ sender: Any) {
+    @IBAction func DidTapLogOut(_ sender: UIButton) {
         PFUser.logOut()
-        self.view.window?.rootViewController = segues.loginViewController
+        let storyBoard =  UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
+        self.view.window?.rootViewController = loginViewController
     }
 }
