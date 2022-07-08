@@ -15,7 +15,7 @@ final class ApiManger {
     }
     
     func makeBusinessRequest() {
-        let apikey = Constants.apiKey
+        let apikey = ApiConstant.apiKey
         let url = URL(string: ApiConstant.ApiUrl)
         var request = URLRequest(url: url!)
         request.setValue("Bearer \(apikey)", forHTTPHeaderField: "Authorization")
