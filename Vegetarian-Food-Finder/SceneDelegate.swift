@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if PFUser.current() != nil {
             let storyBoard =  UIStoryboard(name: "Main", bundle: nil)
-            window?.rootViewController = storyBoard.instantiateViewController(withIdentifier: "AuthenticatedViewController")
+            window?.rootViewController = storyBoard.instantiateViewController(withIdentifier:"Vegetarian_Food_Finder.LoginViewController")
         }
     }
 }

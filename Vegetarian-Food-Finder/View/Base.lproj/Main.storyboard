@@ -70,7 +70,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Vegetarian_Food_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Vegetarian_Food_Finder.LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Vegetarian_Food_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,12 +133,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
+            <point key="canvasLocation" x="-1238" y="-585"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Vegetarian_Food_Finder.HomeViewController-->
         <scene sceneID="W9d-cd-thg">
             <objects>
-                <viewController storyboardIdentifier="HomeVIewController" id="1YU-Ov-onn" customClass="HomeViewController" customModule="Vegetarian_Food_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Vegetarian_Food_Finder.HomeViewController" title="Vegetarian_Food_Finder.HomeViewController" id="1YU-Ov-onn" customClass="HomeViewController" customModule="Vegetarian_Food_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OHP-Q1-8Te">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,6 +208,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="dEU-Dc-mzM" id="ICR-2g-KM4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXq-QO-I2l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -245,7 +248,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoN-sq-GWo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979" y="129"/>
+            <point key="canvasLocation" x="138" y="118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0NL-0B-l5t">

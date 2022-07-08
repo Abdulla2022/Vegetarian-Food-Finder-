@@ -9,7 +9,5 @@ import Foundation
 import UIKit
 
 struct Constants{
-    
-    static let segueToSignUp = "SegueToSignUp"
     static let resturantCell = "RestaurantCell"
 }

@@ -7,16 +7,13 @@
 import UIKit
 import Parse
 
-final class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController{
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    @IBOutlet weak var tableView: UITableView!
+    var restaurants: NSArray = []
     
     @IBAction func DidTapLogOut(_ sender: UIButton) {
         PFUser.logOut()
-        let storyBoard =  UIStoryboard(name: "Main", bundle: nil)
-        let loginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
-        self.view.window?.rootViewController = loginViewController
+        self.view.window?.rootViewController = LoginViewController.viewController
     }
 }
