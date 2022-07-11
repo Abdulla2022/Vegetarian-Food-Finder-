@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		20E81D099D2BB26067E12459 /* Pods_Vegetarian_Food_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00136DB6F9256C81622F46D /* Pods_Vegetarian_Food_Finder.framework */; };
-		8072A4EC28777F6C006AA916 /* ApiManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072A4EB28777F6C006AA916 /* ApiManger.swift */; };
+		8072A4EC28777F6C006AA916 /* YelpApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072A4EB28777F6C006AA916 /* YelpApi.swift */; };
 		8072A4EE2877CFC6006AA916 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072A4ED2877CFC6006AA916 /* Restaurant.swift */; };
+		8072A4F6287C9DF0006AA916 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072A4F5287C9DF0006AA916 /* Business.swift */; };
 		807BCD2228749C3500E1B489 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCD2128749C3500E1B489 /* AppDelegate.swift */; };
 		807BCD2428749C3500E1B489 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCD2328749C3500E1B489 /* SceneDelegate.swift */; };
 		807BCD2928749C3500E1B489 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807BCD2728749C3500E1B489 /* Main.storyboard */; };
@@ -53,8 +54,9 @@
 		58FE7B64A8A749BFEA69700F /* Pods_Vegetarian_Food_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vegetarian_Food_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1E2BBF98DBCA97772D6F87 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFCABAF4AC0BF8800446090 /* Pods-Vegetarian-Food-Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vegetarian-Food-Finder.debug.xcconfig"; path = "Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder.debug.xcconfig"; sourceTree = "<group>"; };
-		8072A4EB28777F6C006AA916 /* ApiManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManger.swift; sourceTree = "<group>"; };
+		8072A4EB28777F6C006AA916 /* YelpApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpApi.swift; sourceTree = "<group>"; };
 		8072A4ED2877CFC6006AA916 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		8072A4F5287C9DF0006AA916 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		807BCD1E28749C3500E1B489 /* Vegetarian-Food-Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vegetarian-Food-Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		807BCD2128749C3500E1B489 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		807BCD2328749C3500E1B489 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,7 +157,7 @@
 		807BCD2028749C3500E1B489 /* Vegetarian-Food-Finder */ = {
 			isa = PBXGroup;
 			children = (
-				80C17D412875FF4800D73CA2 /* Api */,
+				80C17D412875FF4800D73CA2 /* Networking */,
 				80C17D3F2875FF2B00D73CA2 /* Model */,
 				807BCD5228749FF800E1B489 /* View */,
 				807BCD5128749FEA00E1B489 /* Controller */,
@@ -211,16 +213,17 @@
 			isa = PBXGroup;
 			children = (
 				8072A4ED2877CFC6006AA916 /* Restaurant.swift */,
+				8072A4F5287C9DF0006AA916 /* Business.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		80C17D412875FF4800D73CA2 /* Api */ = {
+		80C17D412875FF4800D73CA2 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				8072A4EB28777F6C006AA916 /* ApiManger.swift */,
+				8072A4EB28777F6C006AA916 /* YelpApi.swift */,
 			);
-			path = Api;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,7 +474,8 @@
 				80C17D45287632C900D73CA2 /* StoryboardIdentifiable.swift in Sources */,
 				80C17CE92874DD2500D73CA2 /* RestaurantCell.swift in Sources */,
 				807BCD2428749C3500E1B489 /* SceneDelegate.swift in Sources */,
-				8072A4EC28777F6C006AA916 /* ApiManger.swift in Sources */,
+				8072A4F6287C9DF0006AA916 /* Business.swift in Sources */,
+				8072A4EC28777F6C006AA916 /* YelpApi.swift in Sources */,
 				807BCD572874B38200E1B489 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,17 +7,13 @@
 import UIKit
 import Parse
 
-final class LoginViewController: UIViewController,StoryboardIdentifiable{
+final class LoginViewController: UIViewController,StoryboardIdentifiable {
     
     @IBOutlet weak var loginUserName: UITextField!
     @IBOutlet weak var loginPassword: UITextField!
     
-    private class Segue{
-        static let segueToSignUp = "SegueToSignUp"
-    }
-    
     @IBAction func didTapSignUp(_ sender: UIButton) {
-        performSegue(withIdentifier:LoginViewController.Segue.segueToSignUp, sender: self)
+        performSegue(withIdentifier:Constants.segueToSignUp, sender: self)
     }
     
     @IBAction func didTapLogin(_ sender: UIButton) {

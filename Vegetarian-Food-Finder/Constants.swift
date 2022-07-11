@@ -10,4 +10,5 @@ import UIKit
 
 struct Constants{
     static let resturantCell = "RestaurantCell"
+    static let segueToSignUp = "SegueToSignUp"
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
- final class Resturant: NSObject {
+struct Resturant {
     var name: String?
     var address: String?
     var imageURL: URL?

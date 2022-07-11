@@ -7,13 +7,14 @@
 import UIKit
 import Parse
 
-final class HomeViewController: UIViewController{
+final class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var restaurants: NSArray = []
+    var restaurant: [Resturant]!
     
     @IBAction func DidTapLogOut(_ sender: UIButton) {
         PFUser.logOut()
         self.view.window?.rootViewController = LoginViewController.viewController
     }
+
 }
