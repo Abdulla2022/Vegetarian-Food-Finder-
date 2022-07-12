@@ -7,14 +7,42 @@
 import UIKit
 import Parse
 
-final class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
-    var restaurant: [Resturant]!
+    var restaurants: [Business] = []
     
-    @IBAction func DidTapLogOut(_ sender: UIButton) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        Task{
+            let dataFromApi = try await YelpApi().searchVeggiBusinessesInSF()
+            self.restaurants = dataFromApi
+        }
+        tableView.reloadData()
+    }
+    
+    @IBAction func didTapLogOut(_ sender: UIButton) {
         PFUser.logOut()
         self.view.window?.rootViewController = LoginViewController.viewController
     }
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard restaurants.count != 0 else{
+            return 0
+        }
+        return restaurants.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.resturantCell, for: indexPath) as! RestaurantCell
+        let restaurant  = restaurants[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: Constants.segueFromSearchToDetails, sender: self)
+    }
+    
 }

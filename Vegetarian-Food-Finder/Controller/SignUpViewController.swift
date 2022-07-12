@@ -7,7 +7,7 @@
 import Parse
 import UIKit
 
-final class SignUpViewController: UIViewController {
+final class SignUpViewController: UIViewController,StoryboardIdentifiable {
     
     @IBOutlet weak var signUpPassword: UITextField!
     @IBOutlet weak var signUpEmail: UITextField!
@@ -24,8 +24,7 @@ final class SignUpViewController: UIViewController {
                 return
             }
             print("User Registered successfully")
-            let storyBoard =  UIStoryboard(name: "Main", bundle: nil)
-            let tabBarController = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController
+            let tabBarController = SignUpViewController.storyboard.instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController
             self.view.window?.rootViewController = tabBarController
         }
     }

@@ -28,8 +28,7 @@ final class LoginViewController: UIViewController,StoryboardIdentifiable {
                 return;
             }
             print("User logged in successfully")
-            let storyBoard =  UIStoryboard(name: "Main", bundle: nil)
-            let tabBarController = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController
+            let tabBarController = Self.storyboard.instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController
             self?.view.window?.rootViewController = tabBarController
         }
     }

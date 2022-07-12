@@ -4,7 +4,6 @@
 //
 //  Created by Abdullahi Ahmed on 7/7/22.
 //
-
 import UIKit
 
 struct Resturant {

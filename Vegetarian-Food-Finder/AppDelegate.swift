@@ -4,7 +4,6 @@
 //
 //  Created by Abdullahi Ahmed on 7/5/22.
 //
-
 import Parse
 import UIKit
 @main
