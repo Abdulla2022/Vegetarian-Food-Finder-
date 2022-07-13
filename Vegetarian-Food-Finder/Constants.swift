@@ -7,7 +7,7 @@
 import Foundation
 import UIKit
 
-struct Constants{
+struct Constants {
     static let resturantCell = "RestaurantCell"
     static let segueToSignUp = "SegueToSignUp"
     static let searchBarCell = "SearchBarCell"

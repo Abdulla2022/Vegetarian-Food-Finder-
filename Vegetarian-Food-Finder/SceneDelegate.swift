@@ -4,17 +4,16 @@
 //
 //  Created by Abdullahi Ahmed on 7/5/22.
 //
-import UIKit
 import Parse
+import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-    
     var window: UIWindow?
-    
+
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if PFUser.current() != nil {
-            let storyBoard =  UIStoryboard(name: "Main", bundle: nil)
-            window?.rootViewController = storyBoard.instantiateViewController(withIdentifier:"TabBarController")
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            window?.rootViewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController")
         }
     }
 }

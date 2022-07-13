@@ -12,18 +12,36 @@ struct SearchResults: Codable {
 }
 
 struct Business: Codable, Identifiable {
+    let rating: Double
     let id: String
     let name: String
     let price: String
     let distance: Double
     let imageUrl: URL
     let reviewCount: Int
-    let coordinates: Coordinates
-    let url: String?
-    let phone: String?
+    let categories: [categories]?
+    let location: Location
+    let coordinates: Coordinates?
+    let url: String
+    let phone: String
 }
 
 struct Coordinates: Codable {
-    let latitude: Double?
-    let longitude: Double?
+    let latitude: Double
+    let longitude: Double
+}
+
+struct Location: Codable {
+    let city: String
+    let country: String
+    let address2: String?
+    let address3: String?
+    let state: String
+    let address1: String
+    let zipCode: String
+}
+
+struct categories: Codable {
+    let alias: String
+    let title: String
 }

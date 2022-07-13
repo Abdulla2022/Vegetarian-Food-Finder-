@@ -6,20 +6,22 @@
 //
 import UIKit
 
-final class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate,UISearchResultsUpdating {
-    
-    @IBOutlet weak var tableView: UITableView!
+final class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchResultsUpdating {
+    @IBOutlet var tableView: UITableView!
     let searchController = UISearchController()
-    var resturantList = [Resturant]()
-    var filteredRestaurantsList = [Resturant]()
-    
+    var resturantList: [Resturant] = []
+    var filteredRestaurantsList: [Resturant] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Search"
         setUpSearchController()
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.reloadData()
     }
-    
-    func setUpSearchController(){
+
+    func setUpSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.enablesReturnKeyAutomatically = false
@@ -30,30 +32,20 @@ final class SearchViewController: UIViewController, UITableViewDataSource, UITab
         searchController.searchBar.scopeButtonTitles = ["All", "Near By", "Top Rated"]
         searchController.searchBar.delegate = self
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (searchController.isActive){
-            return filteredRestaurantsList.count
-        }
-        return resturantList.count
+        return searchController.isActive ? filteredRestaurantsList.count : resturantList.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.searchBarCell)!
-        let thisRestaurant:Resturant!
-        if (searchController.isActive){
-            thisRestaurant = filteredRestaurantsList[indexPath.row]
-        }else{
-            thisRestaurant = resturantList[indexPath.row]
-        }
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.searchBarCell, for: indexPath) as! SearchBarCell
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: Constants.segueFromSearchToDetails, sender: self)
+        performSegue(withIdentifier: Constants.segueFromSearchToDetails, sender: self)
     }
-    
+
     func updateSearchResults(for searchController: UISearchController) {
     }
 }
