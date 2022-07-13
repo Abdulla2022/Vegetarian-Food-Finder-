@@ -20,10 +20,8 @@ final class SignUpViewController: UIViewController,StoryboardIdentifiable {
         newUser.password = signUpPassword.text
         newUser.signUpInBackground { (success: Bool, error: Error?) in
             guard success else{
-                print(error?.localizedDescription)
                 return
             }
-            print("User Registered successfully")
             let tabBarController = SignUpViewController.storyboard.instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController
             self.view.window?.rootViewController = tabBarController
         }

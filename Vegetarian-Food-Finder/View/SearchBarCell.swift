@@ -7,9 +7,8 @@
 import UIKit
 
 class SearchBarCell: UITableViewCell {
-    
-    @IBOutlet weak var restaurantNameLabel: UILabel!
-    @IBOutlet weak var restaurantAddressLabel: UILabel!
-    @IBOutlet weak var restaurantStatusLabel: UILabel!
-    @IBOutlet weak var restaurantImage: UIImageView!
+    @IBOutlet var restaurantNameLabel: UILabel!
+    @IBOutlet var restaurantAddressLabel: UILabel!
+    @IBOutlet var restaurantStatusLabel: UILabel!
+    @IBOutlet var restaurantImage: UIImageView!
 }
