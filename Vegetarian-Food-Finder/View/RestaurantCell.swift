@@ -12,13 +12,7 @@ final class RestaurantCell: UITableViewCell {
     @IBOutlet var resturantAddress: UILabel!
     @IBOutlet var ratingOfResturant: UILabel!
 
-    public var restaurant: Business! {
-        didSet {
-            configureForRestaurants()
-        }
-    }
-
-    private func configureForRestaurants() {
+    func configure(for restaurant: Business) {
         nameOfResturant.text = restaurant.name
         ratingOfResturant.text = "\(restaurant.rating)"
         let address = restaurant.location.address1
@@ -28,19 +22,5 @@ final class RestaurantCell: UITableViewCell {
         let country = restaurant.location.country
         resturantAddress.text = "\(address),\(city),\(zipCode),\(state),\(country)"
         imageOfResturant.load(url: restaurant.imageUrl)
-    }
-}
-
-extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
     }
 }
