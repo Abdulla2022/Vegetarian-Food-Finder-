@@ -22,6 +22,7 @@ final class LoginViewController: UIViewController, StoryboardIdentifiable {
         }
         PFUser.logInWithUsername(inBackground: userName, password: password) { [weak self] (_: PFUser?, error: Error?) in
             guard error == nil else {
+                self?.showOkActionAlert(withTitle: "Can not login", andMessage: "Invalid Username/Password")
                 return
             }
             let tabBarController = Self.storyboard.instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController

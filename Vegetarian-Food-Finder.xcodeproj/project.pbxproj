@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		20E81D099D2BB26067E12459 /* Pods_Vegetarian_Food_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00136DB6F9256C81622F46D /* Pods_Vegetarian_Food_Finder.framework */; };
+		805FA7F9288078E80022B3B5 /* UIImageView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FA7F8288078E80022B3B5 /* UIImageView+Loader.swift */; };
 		8072A4EC28777F6C006AA916 /* YelpApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072A4EB28777F6C006AA916 /* YelpApi.swift */; };
 		8072A4EE2877CFC6006AA916 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072A4ED2877CFC6006AA916 /* Restaurant.swift */; };
 		8072A4F6287C9DF0006AA916 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072A4F5287C9DF0006AA916 /* Business.swift */; };
@@ -23,6 +24,7 @@
 		807BCD4528749C3600E1B489 /* Vegetarian_Food_FinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCD4428749C3600E1B489 /* Vegetarian_Food_FinderUITestsLaunchTests.swift */; };
 		807BCD552874A14000E1B489 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCD542874A14000E1B489 /* LoginViewController.swift */; };
 		807BCD572874B38200E1B489 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCD562874B38200E1B489 /* HomeViewController.swift */; };
+		807CC5E22880866600260430 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CC5E12880866600260430 /* UIViewController+Alert.swift */; };
 		80C17CE52874CF7F00D73CA2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C17CE42874CF7F00D73CA2 /* SearchViewController.swift */; };
 		80C17CE92874DD2500D73CA2 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C17CE82874DD2500D73CA2 /* RestaurantCell.swift */; };
 		80C17D372874F24700D73CA2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C17D362874F24700D73CA2 /* SignUpViewController.swift */; };
@@ -56,6 +58,7 @@
 		58FE7B64A8A749BFEA69700F /* Pods_Vegetarian_Food_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vegetarian_Food_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1E2BBF98DBCA97772D6F87 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFCABAF4AC0BF8800446090 /* Pods-Vegetarian-Food-Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vegetarian-Food-Finder.debug.xcconfig"; path = "Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder.debug.xcconfig"; sourceTree = "<group>"; };
+		805FA7F8288078E80022B3B5 /* UIImageView+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Loader.swift"; sourceTree = "<group>"; };
 		8072A4EB28777F6C006AA916 /* YelpApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpApi.swift; sourceTree = "<group>"; };
 		8072A4ED2877CFC6006AA916 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		8072A4F5287C9DF0006AA916 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		807BCD4428749C3600E1B489 /* Vegetarian_Food_FinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vegetarian_Food_FinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		807BCD542874A14000E1B489 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		807BCD562874B38200E1B489 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		807CC5E12880866600260430 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		80C17CE42874CF7F00D73CA2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		80C17CE82874DD2500D73CA2 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		80C17D362874F24700D73CA2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -165,10 +169,10 @@
 				80C17D3F2875FF2B00D73CA2 /* Model */,
 				807BCD5228749FF800E1B489 /* View */,
 				807BCD5128749FEA00E1B489 /* Controller */,
+				80AB183E28815D17009FBDE7 /* ProtocolsAndExtensions */,
 				807BCD2128749C3500E1B489 /* AppDelegate.swift */,
 				807BCD2328749C3500E1B489 /* SceneDelegate.swift */,
 				80C17D38287542FE00D73CA2 /* Constants.swift */,
-				80C17D44287632C900D73CA2 /* StoryboardIdentifiable.swift */,
 				807BCD2A28749C3600E1B489 /* Assets.xcassets */,
 				807BCD2C28749C3600E1B489 /* LaunchScreen.storyboard */,
 				807BCD2F28749C3600E1B489 /* Info.plist */,
@@ -213,6 +217,16 @@
 				8072A4F9287DAC38006AA916 /* SearchBarCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		80AB183E28815D17009FBDE7 /* ProtocolsAndExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				80C17D44287632C900D73CA2 /* StoryboardIdentifiable.swift */,
+				805FA7F8288078E80022B3B5 /* UIImageView+Loader.swift */,
+				807CC5E12880866600260430 /* UIViewController+Alert.swift */,
+			);
+			path = ProtocolsAndExtensions;
 			sourceTree = "<group>";
 		};
 		80C17D3F2875FF2B00D73CA2 /* Model */ = {
@@ -478,6 +492,7 @@
 				80C17D39287542FE00D73CA2 /* Constants.swift in Sources */,
 				807BCD552874A14000E1B489 /* LoginViewController.swift in Sources */,
 				807BCD2228749C3500E1B489 /* AppDelegate.swift in Sources */,
+				807CC5E22880866600260430 /* UIViewController+Alert.swift in Sources */,
 				80C17D45287632C900D73CA2 /* StoryboardIdentifiable.swift in Sources */,
 				80C17CE92874DD2500D73CA2 /* RestaurantCell.swift in Sources */,
 				807BCD2428749C3500E1B489 /* SceneDelegate.swift in Sources */,
@@ -485,6 +500,7 @@
 				8072A4FC287DB300006AA916 /* DetailsViewController.swift in Sources */,
 				8072A4EC28777F6C006AA916 /* YelpApi.swift in Sources */,
 				807BCD572874B38200E1B489 /* HomeViewController.swift in Sources */,
+				805FA7F9288078E80022B3B5 /* UIImageView+Loader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +681,8 @@
 				DEVELOPMENT_TEAM = UCG4UQP97K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vegetarian-Food-Finder/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Your Location Is Shared with the admin ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your Location Is Shared with the admin ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -694,6 +712,8 @@
 				DEVELOPMENT_TEAM = UCG4UQP97K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vegetarian-Food-Finder/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Your Location Is Shared with the admin ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your Location Is Shared with the admin ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
