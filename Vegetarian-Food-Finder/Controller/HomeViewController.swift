@@ -8,11 +8,8 @@ import CoreLocation
 import Parse
 import UIKit
 
-final class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
+final class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var tableView: UITableView!
-    private var locationManager: CLLocationManager?
-    private var longitudeOfUser: Double = 0.0
-    private var latitudeOfUser: Double = 0.0
     var restaurantsList: [Business] = [] {
         didSet {
             tableView.reloadData()
@@ -24,58 +21,15 @@ final class HomeViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
-        getUserLocation()
-        getResturantsData()
-    }
-
-    private func getUserLocation() {
-        locationManager = CLLocationManager()
-        locationManager?.requestAlwaysAuthorization()
-        locationManager?.startUpdatingLocation()
-        locationManager?.delegate = self
-        locationManager?.allowsBackgroundLocationUpdates = true
-    }
-
-    private func getResturantsData() {
-        Task {
-            do {
-                self.restaurantsList = try await YelpApi().searchVeggiBusinessesInSF()
-            } catch {
-                showOkActionAlert(withTitle: "Can't get the data", andMessage: "the server cannot process the request")
-            }
+        getResturantsData { restaurantsData in
+            self.restaurantsList = restaurantsData
         }
     }
 
-    // Still working on this
-    private func recommendBasedOnPrice() -> [String: String] {
-        var restaurantsPrices: [String: String] = [:]
-        for restaurant in restaurantsList {
-            restaurantsPrices[restaurant.name] = restaurant.price
-        }
-        let sortedTubleArray = restaurantsPrices.sorted(by: { $0.value > $1.value })
-        let sortedRestaurantsPrices = sortedTubleArray.reduce(into: [:]) { $0[$1.0] = $1.1 }
-        return sortedRestaurantsPrices
+    @IBAction func didTapRecommendCheapRestaurant(_ sender: Any) {
     }
 
-    private func recommendBasedOnRating() -> [String: Double] {
-        var restaurantsRatings: [String: Double] = [:]
-        for resturant in restaurantsList {
-            restaurantsRatings[resturant.name] = resturant.rating
-        }
-        let sortedTubleArray = restaurantsRatings.sorted(by: { $0.value > $1.value })
-        let sortedRestaurantsRatings = sortedTubleArray.reduce(into: [:]) { $0[$1.0] = $1.1 }
-        return sortedRestaurantsRatings
-    }
-
-    private func distanceToRestaurant() -> [String: Double] {
-        var distancesToResturants: [String: Double] = [:]
-        let UserLocaiton = CLLocation(latitude: latitudeOfUser, longitude: longitudeOfUser)
-        for restaurant in restaurantsList {
-            let resturantLocation = CLLocation(latitude: restaurant.coordinates!.latitude, longitude: restaurant.coordinates!.longitude)
-            let distance = UserLocaiton.distance(from: resturantLocation)
-            distancesToResturants[restaurant.name] = distance
-        }
-        return distancesToResturants
+    @IBAction func didTapRecommendFancyRestaurant(_ sender: Any) {
     }
 
     @IBAction func didTapLogOut(_ sender: UIButton) {
@@ -96,12 +50,5 @@ final class HomeViewController: UIViewController, UITableViewDelegate, UITableVi
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: Constants.segueFromHomeToDetails, sender: self)
-    }
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last {
-            latitudeOfUser = location.coordinate.latitude
-            longitudeOfUser = location.coordinate.longitude
-        }
     }
 }

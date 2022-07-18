@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20E81D099D2BB26067E12459 /* Pods_Vegetarian_Food_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00136DB6F9256C81622F46D /* Pods_Vegetarian_Food_Finder.framework */; };
+		5A68AFBDDDE5504A9261EEF6 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1276CFD2C02448C66B7B7BE6 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework */; };
+		6861EBFEE4D9A7B7721CAC6D /* Pods_Vegetarian_Food_FinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111EE367714F1F8968584F60 /* Pods_Vegetarian_Food_FinderTests.framework */; };
+		805E2E922885D29B00CF546A /* fetchRestaurantsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805E2E912885D29B00CF546A /* fetchRestaurantsData.swift */; };
 		805FA7F9288078E80022B3B5 /* UIImageView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FA7F8288078E80022B3B5 /* UIImageView+Loader.swift */; };
 		8072A4EC28777F6C006AA916 /* YelpApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072A4EB28777F6C006AA916 /* YelpApi.swift */; };
 		8072A4EE2877CFC6006AA916 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072A4ED2877CFC6006AA916 /* Restaurant.swift */; };
@@ -25,13 +27,17 @@
 		807BCD552874A14000E1B489 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCD542874A14000E1B489 /* LoginViewController.swift */; };
 		807BCD572874B38200E1B489 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCD562874B38200E1B489 /* HomeViewController.swift */; };
 		807CC5E22880866600260430 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CC5E12880866600260430 /* UIViewController+Alert.swift */; };
+		80AB1844288504F6009FBDE7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB1843288504F6009FBDE7 /* MapViewController.swift */; };
+		80AB1846288515CD009FBDE7 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB1845288515CD009FBDE7 /* ResultsViewController.swift */; };
+		80AB184828852502009FBDE7 /* GooglePlacesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB184728852502009FBDE7 /* GooglePlacesApi.swift */; };
+		80AB184A28852863009FBDE7 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB184928852863009FBDE7 /* Place.swift */; };
 		80C17CE52874CF7F00D73CA2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C17CE42874CF7F00D73CA2 /* SearchViewController.swift */; };
 		80C17CE92874DD2500D73CA2 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C17CE82874DD2500D73CA2 /* RestaurantCell.swift */; };
 		80C17D372874F24700D73CA2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C17D362874F24700D73CA2 /* SignUpViewController.swift */; };
 		80C17D39287542FE00D73CA2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C17D38287542FE00D73CA2 /* Constants.swift */; };
 		80C17D45287632C900D73CA2 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C17D44287632C900D73CA2 /* StoryboardIdentifiable.swift */; };
-		84CAB942AA8C971538957AF6 /* Pods_Vegetarian_Food_FinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FE7B64A8A749BFEA69700F /* Pods_Vegetarian_Food_FinderTests.framework */; };
-		E2A30EAEEAFD26285BE2F077 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1E2BBF98DBCA97772D6F87 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework */; };
+		80D8EA5028854B8000D87AD2 /* ResultsViewControllerDelegaet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D8EA4F28854B8000D87AD2 /* ResultsViewControllerDelegaet.swift */; };
+		F3E4C3D27E559D963900D2B8 /* Pods_Vegetarian_Food_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421A79FC663BB4D9388E1995 /* Pods_Vegetarian_Food_Finder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,11 +59,13 @@
 
 /* Begin PBXFileReference section */
 		02B40F6DB105095C284B2F2A /* Pods-Vegetarian-Food-FinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vegetarian-Food-FinderTests.debug.xcconfig"; path = "Target Support Files/Pods-Vegetarian-Food-FinderTests/Pods-Vegetarian-Food-FinderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		111EE367714F1F8968584F60 /* Pods_Vegetarian_Food_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vegetarian_Food_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1276CFD2C02448C66B7B7BE6 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D8C841ABBECEFD46B255FDB /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.release.xcconfig"; path = "Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		325961355430099336D92951 /* Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		58FE7B64A8A749BFEA69700F /* Pods_Vegetarian_Food_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vegetarian_Food_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B1E2BBF98DBCA97772D6F87 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		421A79FC663BB4D9388E1995 /* Pods_Vegetarian_Food_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vegetarian_Food_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFCABAF4AC0BF8800446090 /* Pods-Vegetarian-Food-Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vegetarian-Food-Finder.debug.xcconfig"; path = "Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder.debug.xcconfig"; sourceTree = "<group>"; };
+		805E2E912885D29B00CF546A /* fetchRestaurantsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchRestaurantsData.swift; sourceTree = "<group>"; };
 		805FA7F8288078E80022B3B5 /* UIImageView+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Loader.swift"; sourceTree = "<group>"; };
 		8072A4EB28777F6C006AA916 /* YelpApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpApi.swift; sourceTree = "<group>"; };
 		8072A4ED2877CFC6006AA916 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
@@ -79,13 +87,17 @@
 		807BCD542874A14000E1B489 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		807BCD562874B38200E1B489 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		807CC5E12880866600260430 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		80AB1843288504F6009FBDE7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		80AB1845288515CD009FBDE7 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		80AB184728852502009FBDE7 /* GooglePlacesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesApi.swift; sourceTree = "<group>"; };
+		80AB184928852863009FBDE7 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		80C17CE42874CF7F00D73CA2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		80C17CE82874DD2500D73CA2 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		80C17D362874F24700D73CA2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		80C17D38287542FE00D73CA2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		80C17D44287632C900D73CA2 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
+		80D8EA4F28854B8000D87AD2 /* ResultsViewControllerDelegaet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewControllerDelegaet.swift; sourceTree = "<group>"; };
 		C25969F2DA94A591D17BC68E /* Pods-Vegetarian-Food-Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vegetarian-Food-Finder.release.xcconfig"; path = "Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder.release.xcconfig"; sourceTree = "<group>"; };
-		E00136DB6F9256C81622F46D /* Pods_Vegetarian_Food_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vegetarian_Food_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A52A24B5B9CB7E5F006DB2 /* Pods-Vegetarian-Food-FinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vegetarian-Food-FinderTests.release.xcconfig"; path = "Target Support Files/Pods-Vegetarian-Food-FinderTests/Pods-Vegetarian-Food-FinderTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20E81D099D2BB26067E12459 /* Pods_Vegetarian_Food_Finder.framework in Frameworks */,
+				F3E4C3D27E559D963900D2B8 /* Pods_Vegetarian_Food_Finder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84CAB942AA8C971538957AF6 /* Pods_Vegetarian_Food_FinderTests.framework in Frameworks */,
+				6861EBFEE4D9A7B7721CAC6D /* Pods_Vegetarian_Food_FinderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2A30EAEEAFD26285BE2F077 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework in Frameworks */,
+				5A68AFBDDDE5504A9261EEF6 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,9 +132,9 @@
 		0A3A97204C53730397E085F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E00136DB6F9256C81622F46D /* Pods_Vegetarian_Food_Finder.framework */,
-				5B1E2BBF98DBCA97772D6F87 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework */,
-				58FE7B64A8A749BFEA69700F /* Pods_Vegetarian_Food_FinderTests.framework */,
+				421A79FC663BB4D9388E1995 /* Pods_Vegetarian_Food_Finder.framework */,
+				1276CFD2C02448C66B7B7BE6 /* Pods_Vegetarian_Food_Finder_Vegetarian_Food_FinderUITests.framework */,
+				111EE367714F1F8968584F60 /* Pods_Vegetarian_Food_FinderTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,7 +179,6 @@
 			children = (
 				80C17D412875FF4800D73CA2 /* Networking */,
 				80C17D3F2875FF2B00D73CA2 /* Model */,
-				807BCD5228749FF800E1B489 /* View */,
 				807BCD5128749FEA00E1B489 /* Controller */,
 				80AB183E28815D17009FBDE7 /* ProtocolsAndExtensions */,
 				807BCD2128749C3500E1B489 /* AppDelegate.swift */,
@@ -200,11 +211,13 @@
 		807BCD5128749FEA00E1B489 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				807BCD542874A14000E1B489 /* LoginViewController.swift */,
 				807BCD562874B38200E1B489 /* HomeViewController.swift */,
+				807BCD542874A14000E1B489 /* LoginViewController.swift */,
 				80C17CE42874CF7F00D73CA2 /* SearchViewController.swift */,
 				80C17D362874F24700D73CA2 /* SignUpViewController.swift */,
 				8072A4FB287DB300006AA916 /* DetailsViewController.swift */,
+				80AB1845288515CD009FBDE7 /* ResultsViewController.swift */,
+				80AB1843288504F6009FBDE7 /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -225,6 +238,8 @@
 				80C17D44287632C900D73CA2 /* StoryboardIdentifiable.swift */,
 				805FA7F8288078E80022B3B5 /* UIImageView+Loader.swift */,
 				807CC5E12880866600260430 /* UIViewController+Alert.swift */,
+				80D8EA4F28854B8000D87AD2 /* ResultsViewControllerDelegaet.swift */,
+				805E2E912885D29B00CF546A /* fetchRestaurantsData.swift */,
 			);
 			path = ProtocolsAndExtensions;
 			sourceTree = "<group>";
@@ -234,6 +249,8 @@
 			children = (
 				8072A4ED2877CFC6006AA916 /* Restaurant.swift */,
 				8072A4F5287C9DF0006AA916 /* Business.swift */,
+				80AB184928852863009FBDE7 /* Place.swift */,
+				807BCD5228749FF800E1B489 /* View */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				8072A4EB28777F6C006AA916 /* YelpApi.swift */,
+				80AB184728852502009FBDE7 /* GooglePlacesApi.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -257,7 +275,8 @@
 				807BCD1A28749C3500E1B489 /* Sources */,
 				807BCD1B28749C3500E1B489 /* Frameworks */,
 				807BCD1C28749C3500E1B489 /* Resources */,
-				9FCE32A0BFDF386FA9CE57C4 /* [CP] Embed Pods Frameworks */,
+				A9213D6E92AAE698BA104C22 /* [CP] Copy Pods Resources */,
+				BA9BF93CDBDCF328EBCD3AAB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,7 +314,8 @@
 				807BCD3A28749C3600E1B489 /* Sources */,
 				807BCD3B28749C3600E1B489 /* Frameworks */,
 				807BCD3C28749C3600E1B489 /* Resources */,
-				38A3F2F0868A04D028FB6EDC /* [CP] Embed Pods Frameworks */,
+				6F03CAE745A0E3CD158D76A8 /* [CP] Copy Pods Resources */,
+				95F53075189DC1AE802C8A84 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -378,23 +398,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		38A3F2F0868A04D028FB6EDC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		58B83DCBDA8B699A67549EDE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -417,21 +420,55 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9FCE32A0BFDF386FA9CE57C4 /* [CP] Embed Pods Frameworks */ = {
+		6F03CAE745A0E3CD158D76A8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95F53075189DC1AE802C8A84 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests/Pods-Vegetarian-Food-Finder-Vegetarian-Food-FinderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9213D6E92AAE698BA104C22 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B5C8B3613BBA325876D0DAD6 /* [CP] Check Pods Manifest.lock */ = {
@@ -454,6 +491,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA9BF93CDBDCF328EBCD3AAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vegetarian-Food-Finder/Pods-Vegetarian-Food-Finder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F07C1E9BCB67635E3C63F777 /* [CP] Check Pods Manifest.lock */ = {
@@ -486,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8072A4FA287DAC38006AA916 /* SearchBarCell.swift in Sources */,
+				80AB1846288515CD009FBDE7 /* ResultsViewController.swift in Sources */,
 				8072A4EE2877CFC6006AA916 /* Restaurant.swift in Sources */,
 				80C17CE52874CF7F00D73CA2 /* SearchViewController.swift in Sources */,
 				80C17D372874F24700D73CA2 /* SignUpViewController.swift in Sources */,
@@ -493,14 +548,19 @@
 				807BCD552874A14000E1B489 /* LoginViewController.swift in Sources */,
 				807BCD2228749C3500E1B489 /* AppDelegate.swift in Sources */,
 				807CC5E22880866600260430 /* UIViewController+Alert.swift in Sources */,
+				80D8EA5028854B8000D87AD2 /* ResultsViewControllerDelegaet.swift in Sources */,
 				80C17D45287632C900D73CA2 /* StoryboardIdentifiable.swift in Sources */,
 				80C17CE92874DD2500D73CA2 /* RestaurantCell.swift in Sources */,
+				805E2E922885D29B00CF546A /* fetchRestaurantsData.swift in Sources */,
+				80AB184A28852863009FBDE7 /* Place.swift in Sources */,
 				807BCD2428749C3500E1B489 /* SceneDelegate.swift in Sources */,
 				8072A4F6287C9DF0006AA916 /* Business.swift in Sources */,
+				80AB1844288504F6009FBDE7 /* MapViewController.swift in Sources */,
 				8072A4FC287DB300006AA916 /* DetailsViewController.swift in Sources */,
 				8072A4EC28777F6C006AA916 /* YelpApi.swift in Sources */,
 				807BCD572874B38200E1B489 /* HomeViewController.swift in Sources */,
 				805FA7F9288078E80022B3B5 /* UIImageView+Loader.swift in Sources */,
+				80AB184828852502009FBDE7 /* GooglePlacesApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,11 +753,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "AbdullaA.Vegetarian-Food-Finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -710,6 +773,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UCG4UQP97K;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vegetarian-Food-Finder/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Your Location Is Shared with the admin ";
@@ -724,11 +788,13 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "AbdullaA.Vegetarian-Food-Finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};

@@ -13,4 +13,7 @@ struct Constants {
     static let searchBarCell = "SearchBarCell"
     static let segueFromSearchToDetails = "SegueFromSearchToDetails"
     static let segueFromHomeToDetails = "SegueFromHomeToDetails"
+    static let segueFromHomeToRecommedned = "segueFromHomeToRecommend"
+    static let segueFromRecommendToDetails = "FromRecommendToDetails"
+    static let mapViewSearchBarCell = "mapViewSearchBarCell"
 }
