@@ -21,9 +21,35 @@ final class HomeViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
-        getResturantsData { restaurantsData in
-            self.restaurantsList = restaurantsData
+        // still working on this
+        // will handle error
+        Task {
+            restaurantsList = (try? await YelpApi.searchVeggiBusinessesInSF()) ?? []
         }
+    }
+
+    private func getStandardDevation() -> Double {
+        let normalizedRestaurantData = restaurantsList
+        let length = Double(normalizedRestaurantData.count)
+        let avg = getAvg()
+        let sumOfSquaredAvgDiffForRating = normalizedRestaurantData.map { pow($0.rating - avg, 2.0) }.reduce(0, +)
+        let sumOfSquaredAvgDiffForDistance = normalizedRestaurantData.map { pow($0.distance - avg, 2.0) }.reduce(0, +)
+        let sumOfSquaredAvgDiffForPrices = normalizedRestaurantData.map { pow($0.priceValue - avg, 2.0) }.reduce(0, +)
+        let stdv = sqrt((sumOfSquaredAvgDiffForPrices + sumOfSquaredAvgDiffForRating + sumOfSquaredAvgDiffForDistance) / (length - 1))
+        return stdv
+    }
+
+    private func getAvg() -> Double {
+        let length = Double(restaurantsList.count)
+        var totalDistancesOfRestaurants = 0.0
+        var totalPricesOfRestaurants = 0.0
+        var totalRatingsOfRrstaurant = 0.0
+        for restaurnat in restaurantsList {
+            totalPricesOfRestaurants += restaurnat.priceValue
+            totalRatingsOfRrstaurant += restaurnat.rating
+            totalDistancesOfRestaurants += restaurnat.distance
+        }
+        return (totalRatingsOfRrstaurant + totalPricesOfRestaurants + totalDistancesOfRestaurants) / length
     }
 
     @IBAction func didTapRecommendCheapRestaurant(_ sender: Any) {

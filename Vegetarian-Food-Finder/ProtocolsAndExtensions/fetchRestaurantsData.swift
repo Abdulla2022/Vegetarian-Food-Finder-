@@ -12,11 +12,11 @@ protocol fetchRestaurantsData : AnyObject{
     
 }
 
-extension UIViewController: fetchRestaurantsData {
+extension HomeViewController: fetchRestaurantsData {
     func getResturantsData(completion: @escaping ([Business]) -> Void) {
         Task {
             do {
-                let restaurantList: [Business] = try await YelpApi().searchVeggiBusinessesInSF()
+                let restaurantList: [Business] = try await YelpApi.searchVeggiBusinessesInSF()
                 completion(restaurantList)
             } catch {
                 showOkActionAlert(withTitle: "Can't get the data", andMessage: "the server cannot process the request")
