@@ -1,22 +1,26 @@
 PODS:
   - Bolts/Tasks (1.9.1)
+  - GooglePlaces (7.0.0)
   - Parse (1.19.3):
     - Parse/Core (= 1.19.3)
   - Parse/Core (1.19.3):
     - Bolts/Tasks (= 1.9.1)
 
 DEPENDENCIES:
+  - GooglePlaces (= 7.0.0)
   - Parse
 
 SPEC REPOS:
   trunk:
     - Bolts
+    - GooglePlaces
     - Parse
 
 SPEC CHECKSUMS:
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
+  GooglePlaces: 8dba710bed6160a2e4b85e84aaafdbcc0b4010d8
   Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
 
-PODFILE CHECKSUM: 1331709652a3a9f1d8bb256a5340ca7d0a39db97
+PODFILE CHECKSUM: 97b58f6639c0809df48da7a6762141e89b450a89
 
 COCOAPODS: 1.11.3
