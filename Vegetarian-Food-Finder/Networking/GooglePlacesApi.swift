@@ -26,6 +26,7 @@ final class GooglePlacesApi {
         client.findAutocompletePredictions(fromQuery: query, filter: filter, sessionToken: nil) { results, error in
             guard let results = results, error == nil else {
                 completion(.failure(PlacesError.faildToFind))
+
                 return
             }
             let places: [Place] = results.compactMap({

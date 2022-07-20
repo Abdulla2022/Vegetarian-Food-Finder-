@@ -9,7 +9,7 @@ import UIKit
 final class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     @IBOutlet var tableView: UITableView!
     let searchController = UISearchController()
-    var restaurantList: [Business] = [] {
+    var restaurantsList: [Business] = [] {
         didSet {
             tableView.reloadData()
         }
@@ -22,8 +22,8 @@ final class SearchViewController: UIViewController, UITableViewDataSource, UITab
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
-        getResturantsData { restauratsData in
-            self.restaurantList = restauratsData
+        Task {
+            restaurantsList = (try? await YelpApi.searchVeggiBusinessesInSF()) ?? []
         }
     }
 
@@ -39,12 +39,12 @@ final class SearchViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurantList.count
+        return restaurantsList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.searchBarCell, for: indexPath) as! SearchBarCell
-        let thisRestaurant = restaurantList[indexPath.row]
+        let thisRestaurant = restaurantsList[indexPath.row]
         cell.configure(for: thisRestaurant)
         return cell
     }

@@ -17,6 +17,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UISearchRe
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
+        setUpSearchVC()
+    }
+
+    func setUpSearchVC() {
         searchVC.obscuresBackgroundDuringPresentation = false
         searchVC.searchBar.enablesReturnKeyAutomatically = false
         searchVC.searchBar.placeholder = "Maps"
@@ -68,7 +72,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UISearchRe
                 DispatchQueue.main.sync {
                     resultVC.update(with: places)
                 }
-            case let .failure(_):
+            case .failure:
                 self.showOkActionAlert(withTitle: "Google API faild", andMessage: "try again later")
             }
         }

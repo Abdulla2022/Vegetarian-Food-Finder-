@@ -15,7 +15,7 @@ struct Business: Codable, Identifiable {
     let rating: Double
     let id: String
     let name: String
-    let price: String
+    var price: String
     let distance: Double
     let imageUrl: URL
     let reviewCount: Int
@@ -24,6 +24,9 @@ struct Business: Codable, Identifiable {
     let coordinates: Coordinates?
     let url: String
     let phone: String
+    var priceValue: Double {
+        Double(price.count)
+    }
 }
 
 struct Coordinates: Codable {
