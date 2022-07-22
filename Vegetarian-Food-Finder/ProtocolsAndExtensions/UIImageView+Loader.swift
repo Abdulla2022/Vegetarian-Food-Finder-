@@ -11,13 +11,13 @@ import UIKit
 extension UIImageView {
     func load(url: URL) {
         DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
+            let session = URLSession.shared
+            session.dataTask(with: url, completionHandler: { (data, _, _) -> Void in
+                DispatchQueue.main.async(execute: { () -> Void in
+                    let image = UIImage(data: data!)
+                    self?.image = image
+                })
+            }).resume()
         }
     }
 }

@@ -7,14 +7,11 @@
 import UIKit
 
 final class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+    let searchBarCell = "SearchBarCell"
+    let segueFromSearchToDetails = "SegueFromSearchToDetails"
     @IBOutlet var tableView: UITableView!
     let searchController = UISearchController()
-    var restaurantsList: [Business] = [] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-
+    var restaurantsList: [Business] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Search"
@@ -22,9 +19,8 @@ final class SearchViewController: UIViewController, UITableViewDataSource, UITab
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
-        Task {
-            restaurantsList = (try? await YelpApi.searchVeggiBusinessesInSF()) ?? []
-        }
+        setUpSearchController()
+        tableView.reloadData()
     }
 
     func setUpSearchController() {
@@ -43,13 +39,13 @@ final class SearchViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.searchBarCell, for: indexPath) as! SearchBarCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: searchBarCell, for: indexPath) as! SearchBarCell
         let thisRestaurant = restaurantsList[indexPath.row]
         cell.configure(for: thisRestaurant)
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: Constants.segueFromSearchToDetails, sender: self)
+        performSegue(withIdentifier: segueFromSearchToDetails, sender: self)
     }
 }

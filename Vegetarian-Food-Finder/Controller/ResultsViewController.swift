@@ -10,9 +10,10 @@ import UIKit
 
 class ResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     weak var delegaet: ResultsViewControllerDelegaet?
+    let mapViewSearchBarCell = "mapViewSearchBarCell"
     private let tableView: UITableView = {
         let table = UITableView()
-        table.register(UITableViewCell.self, forCellReuseIdentifier: Constants.mapViewSearchBarCell)
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "mapViewSearchBarCell")
         return table
     }()
 
@@ -31,7 +32,7 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.mapViewSearchBarCell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: mapViewSearchBarCell, for: indexPath)
         cell.textLabel?.text = places[indexPath.row].name
         return cell
     }

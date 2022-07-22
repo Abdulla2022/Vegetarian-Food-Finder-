@@ -29,6 +29,14 @@ struct Business: Codable, Identifiable {
     }
 }
 
+struct RestaurantScore {
+    let priceZScore: Double
+    let distanceZScore: Double
+    let ratingZScore: Double
+    let totalZScore: Double
+    let restaurnt: Business
+}
+
 struct Coordinates: Codable {
     let latitude: Double
     let longitude: Double
