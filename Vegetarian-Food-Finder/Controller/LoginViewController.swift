@@ -8,7 +8,7 @@ import Parse
 import UIKit
 
 final class LoginViewController: UIViewController, StoryboardIdentifiable {
-    let segueToSignUp = "SegueToSignUp"
+    private let segueToSignUp = "SegueToSignUp"
     @IBOutlet var loginUserName: UITextField!
     @IBOutlet var loginPassword: UITextField!
 

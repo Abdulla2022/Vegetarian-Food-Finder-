@@ -9,10 +9,10 @@ import Parse
 import UIKit
 
 final class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let resturantCell = "RestaurantCell"
-    let segueFromHomeToDetails = "SegueFromHomeToDetails"
-    let segueFromHomeToRecommedned = "segueFromHomeToRecommendView"
-    let segueFromToSearch = "segueFromToSearch"
+    private let resturantCell = "RestaurantCell"
+    private let segueFromHomeToDetails = "SegueFromHomeToDetails"
+    private let segueFromHomeToRecommedned = "segueFromHomeToRecommendView"
+    private let segueFromToSearch = "segueFromToSearch"
     @IBOutlet var tableView: UITableView!
     var restaurantsList: [Business] = [] {
         didSet {

@@ -10,7 +10,7 @@ import UIKit
 class DetailsViewController: UIViewController {
     // will use optional (?) instead of forced unwrapping (!) later
     var selectedRestaurant: Business!
-    let detailsCell = "detailsCell"
+    private let detailsCell = "detailsCell"
     @IBOutlet var nameOfResturant: UILabel!
     @IBOutlet var imageOfResturant: UIImageView!
     @IBOutlet var resturantAddress: UILabel!

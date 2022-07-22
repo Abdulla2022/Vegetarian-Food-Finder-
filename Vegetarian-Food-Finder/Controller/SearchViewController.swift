@@ -7,8 +7,8 @@
 import UIKit
 
 final class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
-    let searchBarCell = "SearchBarCell"
-    let segueFromSearchToDetails = "SegueFromSearchToDetails"
+    private let searchBarCell = "SearchBarCell"
+    private let segueFromSearchToDetails = "SegueFromSearchToDetails"
     @IBOutlet var tableView: UITableView!
     let searchController = UISearchController()
     var restaurantsList: [Business] = []

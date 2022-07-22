@@ -8,7 +8,7 @@
 import UIKit
 
 class RecommendViewController: UIViewController {
-    let segueFromRecommendToDetails = "segueFromRecommendToDetails"
+    private let segueFromRecommendToDetails = "segueFromRecommendToDetails"
     var restaurantsList: [Business] = []
     var selectedRestaurant: RestaurantScore!
     @IBOutlet var distanceWeight: UILabel!

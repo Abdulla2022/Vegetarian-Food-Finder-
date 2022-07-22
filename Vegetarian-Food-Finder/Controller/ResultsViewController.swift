@@ -10,7 +10,7 @@ import UIKit
 
 class ResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     weak var delegaet: ResultsViewControllerDelegaet?
-    let mapViewSearchBarCell = "mapViewSearchBarCell"
+    private let mapViewSearchBarCell = "mapViewSearchBarCell"
     private let tableView: UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "mapViewSearchBarCell")
