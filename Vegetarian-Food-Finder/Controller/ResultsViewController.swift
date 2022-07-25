@@ -4,7 +4,6 @@
 //
 //  Created by Abdullahi Ahmed on 7/17/22.
 //
-
 import CoreLocation
 import UIKit
 

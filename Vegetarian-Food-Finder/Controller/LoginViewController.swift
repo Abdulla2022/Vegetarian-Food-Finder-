@@ -4,6 +4,7 @@
 //
 //  Created by Abdullahi Ahmed on 7/5/22.
 //
+import CLTypingLabel
 import Parse
 import UIKit
 
@@ -11,6 +12,15 @@ final class LoginViewController: UIViewController, StoryboardIdentifiable {
     private let segueToSignUp = "SegueToSignUp"
     @IBOutlet var loginUserName: UITextField!
     @IBOutlet var loginPassword: UITextField!
+
+    @IBOutlet var veganFoodFinderLabel: CLTypingLabel!
+    @IBOutlet var welcomeLabel: CLTypingLabel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        welcomeLabel.text = "Welcome To"
+        veganFoodFinderLabel.text = "Vegan Food Finder"
+    }
 
     @IBAction func didTapSignUp(_ sender: UIButton) {
         performSegue(withIdentifier: segueToSignUp, sender: self)

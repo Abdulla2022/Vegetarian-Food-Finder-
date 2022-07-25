@@ -9,7 +9,7 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     // will use optional (?) instead of forced unwrapping (!) later
-    var selectedRestaurant: Business!
+    var selectedRestaurant: Business?
     private let detailsCell = "detailsCell"
     @IBOutlet var nameOfResturant: UILabel!
     @IBOutlet var imageOfResturant: UIImageView!
@@ -28,16 +28,16 @@ class DetailsViewController: UIViewController {
     }
 
     private func configureRestaurnat() {
-        nameOfResturant.text = selectedRestaurant.name
-        ratingOfResturant.text = "\(selectedRestaurant.rating)"
-        let address = selectedRestaurant.location.address1
-        let state = selectedRestaurant.location.state
-        let city = selectedRestaurant.location.city
-        let zipCode = selectedRestaurant.location.zipCode
-        let country = selectedRestaurant.location.country
+        nameOfResturant.text = selectedRestaurant?.name
+        ratingOfResturant.text = "\(selectedRestaurant?.rating)"
+        let address = selectedRestaurant?.location.address1
+        let state = selectedRestaurant?.location.state
+        let city = selectedRestaurant?.location.city
+        let zipCode = selectedRestaurant?.location.zipCode
+        let country = selectedRestaurant?.location.country
         resturantAddress.text = "\(address),\(city),\(zipCode),\(state),\(country)"
-        imageOfResturant.load(url: selectedRestaurant.imageUrl)
-        reviewCountOfRestaurant.text = "\(selectedRestaurant.reviewCount)"
+        imageOfResturant.load(url: selectedRestaurant!.imageUrl)
+        reviewCountOfRestaurant.text = "\(selectedRestaurant?.reviewCount)"
         category.text = selectedRestaurant?.categories?[1].title
     }
 }

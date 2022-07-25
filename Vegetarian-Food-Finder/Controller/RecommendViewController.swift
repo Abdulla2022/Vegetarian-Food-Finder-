@@ -7,10 +7,9 @@
 
 import UIKit
 
-class RecommendViewController: UIViewController {
-    private let segueFromRecommendToDetails = "segueFromRecommendToDetails"
+class RecommendViewController: UIViewController, StoryboardIdentifiable {
     var restaurantsList: [Business] = []
-    var selectedRestaurant: RestaurantScore!
+    var selectedRestaurant: RestaurantScore?
     @IBOutlet var distanceWeight: UILabel!
     @IBOutlet var ratingWeight: UILabel!
     @IBOutlet var priceWeight: UILabel!
@@ -35,13 +34,19 @@ class RecommendViewController: UIViewController {
 
     @IBAction func recommendPressed(_ sender: Any) {
         let calculator = ScoreCalculator(restaurantsList: restaurantsList)
-        let scoreList = calculator.calculateScoreRestaurat(
+        let scoreList = calculator.calculateScoreRestaurant(
             priceWeight: Double(priceSlider.value),
             ratingWeight: Double(ratingSlider.value),
             distanceWeight: Double(distanceSlider.value)
         )
-        let scoreListSlice = scoreList.prefix(5)
-        let topFiveRestaurants = scoreListSlice
+        let topFiveRestaurants = scoreList.prefix(5)
         selectedRestaurant = topFiveRestaurants.randomElement()
+        showDetails()
+    }
+
+    private func showDetails() {
+        let detailsVC: DetailsViewController = RecommendViewController.storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        detailsVC.selectedRestaurant = selectedRestaurant?.restaurnt
+        present(detailsVC, animated: true)
     }
 }
