@@ -13,5 +13,5 @@ struct Resturant {
     var categories: String?
     var distance: String?
     var ratingImage: UIImage?
-    var reviewCount = 0
+    var reviewCount : Int
 }
