@@ -7,9 +7,9 @@
 
 import UIKit
 
-protocol fetchRestaurantsData : AnyObject{
+protocol fetchRestaurantsData: AnyObject {
     func getResturantsData(completion: @escaping ([Business]) -> Void)
-    
+    func getResturantsReviewData(query: String, completion: @escaping ([BusinessReview]) -> Void)
 }
 
 extension HomeViewController: fetchRestaurantsData {
@@ -22,6 +22,16 @@ extension HomeViewController: fetchRestaurantsData {
                 showOkActionAlert(withTitle: "Can't get the data", andMessage: "the server cannot process the request")
             }
         }
-        
+    }
+
+    func getResturantsReviewData(query: String, completion: @escaping ([BusinessReview]) -> Void) {
+        Task {
+            do {
+                let restaurantList: [BusinessReview] = try await YelpApi.searchVeggiBusinessesReviews(query: query)
+                completion(restaurantList)
+            } catch {
+                showOkActionAlert(withTitle: "Can't get the data for reviews", andMessage: "the server cannot process the request")
+            }
+        }
     }
 }

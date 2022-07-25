@@ -29,4 +29,20 @@ final class YelpApi {
         let dataResults = try decoder.decode(SearchResults.self, from: data)
         return dataResults.businesses
     }
+    
+    static func searchVeggiBusinessesReviews(query: String) async throws -> [BusinessReview] {
+        let apiPath = "/businesses/\(query)/reviews"
+        let url = URL(string: ApiUrl + apiPath)
+        var request = URLRequest(url: url!)
+        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            throw serviceError.invalidStatusCode
+        }
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        let dataResults = try decoder.decode(SearchReviewResults.self, from: data)
+        return dataResults.businessesReviews
+    }
 }

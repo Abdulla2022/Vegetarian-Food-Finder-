@@ -79,7 +79,7 @@ final class ScoreCalculator {
      - parameter ratingWeight: A double value provided by the user..
      - parameter distacneWeight: A double value provided by the user..
      */
-    func calculateScoreRestaurat(
+    func calculateScoreRestaurant(
         priceWeight: Double,
         ratingWeight: Double,
         distanceWeight: Double

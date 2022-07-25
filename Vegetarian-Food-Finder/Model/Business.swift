@@ -11,6 +11,10 @@ struct SearchResults: Codable {
     let businesses: [Business]
 }
 
+struct SearchReviewResults: Codable {
+    let businessesReviews: [BusinessReview]
+}
+
 struct Business: Codable, Identifiable {
     let rating: Double
     let id: String
@@ -27,6 +31,19 @@ struct Business: Codable, Identifiable {
     var priceValue: Double {
         Double(price.count)
     }
+}
+
+struct BusinessReview: Codable {
+    let restaurantId: String
+    let user: User
+    let textReview: String
+    let timeCreated: String
+}
+
+struct User: Codable {
+    let UserId: String
+    let UserImage: URL
+    let name: String
 }
 
 struct RestaurantScore {
