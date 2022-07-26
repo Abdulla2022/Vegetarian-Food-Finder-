@@ -1,7 +1,6 @@
 PODS:
   - Bolts/Tasks (1.9.1)
   - CLTypingLabel (0.3.0)
-  - GooglePlaces (7.0.0)
   - Parse (1.19.3):
     - Parse/Core (= 1.19.3)
   - Parse/Core (1.19.3):
@@ -9,22 +8,19 @@ PODS:
 
 DEPENDENCIES:
   - CLTypingLabel
-  - GooglePlaces (= 7.0.0)
   - Parse
 
 SPEC REPOS:
   trunk:
     - Bolts
     - CLTypingLabel
-    - GooglePlaces
     - Parse
 
 SPEC CHECKSUMS:
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   CLTypingLabel: e5f3adf9467a38664a505e6475c23946c3b3c424
-  GooglePlaces: 8dba710bed6160a2e4b85e84aaafdbcc0b4010d8
   Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
 
-PODFILE CHECKSUM: 102dee84e8c4747618854137d632ab7b512b50b0
+PODFILE CHECKSUM: f4fcae273c927bea154847cbdb54b91cd393d7bf
 
 COCOAPODS: 1.11.3

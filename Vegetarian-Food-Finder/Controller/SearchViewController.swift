@@ -12,9 +12,8 @@ final class SearchViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet var tableView: UITableView!
     let searchController = UISearchController()
     var restaurantList: [Business] = []
-    var filteredRestaurantsList: [Business] = []
     var activeRestaurantsList: [Business] {
-        searchController.isActive ? filteredRestaurantsList : restaurantList
+        filterForTextSearch(searchText: searchController.searchBar.text ?? "")
     }
 
     override func viewDidLoad() {
@@ -54,19 +53,21 @@ final class SearchViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     func updateSearchResults(for searchController: UISearchController) {
-        let searchBar = searchController.searchBar
-        let searchText = searchBar.text!
-        filterForTextSearch(searchText: searchText)
+        tableView.reloadData()
     }
 
-    func filterForTextSearch(searchText: String) {
-        filteredRestaurantsList = restaurantList.filter({ Business in
-            if searchController.searchBar.text != "" {
-                let searchTextMatch = Business.name.lowercased().contains(searchText.lowercased())
-                return searchTextMatch
-            }
-            return true
-        })
-        tableView.reloadData()
+    func filterForTextSearch(searchText: String) -> [Business] {
+        if searchText == "" {
+            return restaurantList
+        } else {
+            let filteredRestaurantsList = restaurantList.filter({ Business in
+                if searchText != "" {
+                    let searchTextMatch = Business.name.lowercased().contains(searchText.lowercased())
+                    return searchTextMatch
+                }
+                return true
+            })
+            return filteredRestaurantsList
+        }
     }
 }

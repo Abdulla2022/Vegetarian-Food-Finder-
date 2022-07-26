@@ -6,3 +6,17 @@
 //
 
 import Foundation
+import Parse
+
+class ParsePost: PFObject, PFSubclassing {
+    static func parseClassName() -> String {
+        return "ParsePost"
+    }
+
+    public var id: String
+
+    init(id: String) {
+        self.id = id
+        super.init()
+    }
+}
