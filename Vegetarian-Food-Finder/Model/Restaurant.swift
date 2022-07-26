@@ -4,14 +4,15 @@
 //
 //  Created by Abdullahi Ahmed on 7/7/22.
 //
-import UIKit
 
+import UIKit
 struct Resturant {
-    var name: String?
-    var address: String?
-    var imageURL: URL?
-    var categories: String?
-    var distance: String?
-    var ratingImage: UIImage?
-    var reviewCount : Int
+    let name: String
+    let address: String
+    let imageURL: URL
+    let categories: String
+    let distance: String
+    let ratingImage: UIImage
+    let reviewCount: Int
+    let liked: Bool
 }

@@ -7,6 +7,7 @@ target 'Vegetarian-Food-Finder' do
   # Pods for Vegetarian-Food-Finder
   pod 'Parse'
   pod 'GooglePlaces', '7.0.0'
+  pod 'CLTypingLabel'
    # try this to remove -pie warnings
   #https://stackoverflow.com/questions/52789127/how-to-remove-warning-pie-being-ignored-it-is-only-used-when-linking-a-main
 #  post_install do |installer|
