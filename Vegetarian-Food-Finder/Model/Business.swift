@@ -13,7 +13,7 @@ struct SearchResults: Codable {
 }
 
 struct SearchReviewResults: Codable {
-    let businessesReviews: [BusinessReview]
+    let reviews: [BusinessReview]
 }
 
 struct Business: Codable, Identifiable {
@@ -35,15 +35,15 @@ struct Business: Codable, Identifiable {
 }
 
 struct BusinessReview: Codable {
-    let restaurantId: String
+    let id: String
     let user: User
-    let textReview: String
+    let text: String
     let timeCreated: String
 }
 
 struct User: Codable {
-    let UserId: String
-    let UserImage: URL
+    let id: String
+    let imageUrl: URL?
     let name: String
 }
 

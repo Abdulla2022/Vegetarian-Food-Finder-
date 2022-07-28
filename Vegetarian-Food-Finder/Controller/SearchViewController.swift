@@ -52,22 +52,30 @@ final class SearchViewController: UIViewController, UITableViewDataSource, UITab
         performSegue(withIdentifier: segueFromSearchToDetails, sender: self)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueFromSearchToDetails {
+            let indexPath = tableView.indexPathForSelectedRow!
+            let selectedRestaurant = activeRestaurantsList[indexPath.row]
+            let detailsVc = segue.destination as? DetailsViewController
+            detailsVc?.selectedRestaurant = selectedRestaurant
+        }
+    }
+
     func updateSearchResults(for searchController: UISearchController) {
         tableView.reloadData()
     }
 
     func filterForTextSearch(searchText: String) -> [Business] {
-        if searchText == "" {
+        guard searchText != "" else {
             return restaurantList
-        } else {
-            let filteredRestaurantsList = restaurantList.filter({ Business in
-                if searchText != "" {
-                    let searchTextMatch = Business.name.lowercased().contains(searchText.lowercased())
-                    return searchTextMatch
-                }
-                return true
-            })
-            return filteredRestaurantsList
         }
+        restaurantList = restaurantList.filter({ Business in
+            if searchText != "" {
+                let searchTextMatch = Business.name.lowercased().contains(searchText.lowercased())
+                return searchTextMatch
+            }
+            return true
+        })
+        return restaurantList
     }
 }
