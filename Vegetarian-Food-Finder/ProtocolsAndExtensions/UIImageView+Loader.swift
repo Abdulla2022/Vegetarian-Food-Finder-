@@ -12,8 +12,8 @@ extension UIImageView {
     func load(url: URL) {
         DispatchQueue.global().async { [weak self] in
             let session = URLSession.shared
-            session.dataTask(with: url, completionHandler: { (data, _, _) -> Void in
-                DispatchQueue.main.async(execute: { () -> Void in
+            session.dataTask(with: url, completionHandler: { data, _, _ in
+                DispatchQueue.main.async(execute: { () in
                     let image = UIImage(data: data!)
                     self?.image = image
                 })

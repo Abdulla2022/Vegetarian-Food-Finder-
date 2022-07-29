@@ -7,6 +7,7 @@
 
 import UIKit
 struct Resturant {
+    let id: String
     let name: String
     let address: String
     let imageURL: URL
