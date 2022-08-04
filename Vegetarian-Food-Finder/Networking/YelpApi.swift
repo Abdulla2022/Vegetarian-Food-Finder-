@@ -10,7 +10,7 @@ final class YelpApi {
     private static let ApiUrl = "https://api.yelp.com/v3"
     private static let apiKey = "_fWbIvhY5n5FFDT2iiUnJ2BKwupqLzTbqd7kFco46l6cioKrn2-VnnIU_97bEEJG5Tp-XeHsdcSYWTXV0tO4vFTzq61DbeLrbcA1d0g6wjQ46AzI2gnV3iuCvtHFYnYx"
 
-    private enum serviceError: Error {
+    private enum ServiceError: Error {
         case invalidStatusCode
     }
 
@@ -22,7 +22,7 @@ final class YelpApi {
         request.httpMethod = "GET"
         let (data, response) = try await URLSession.shared.data(for: request)
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-            throw serviceError.invalidStatusCode
+            throw ServiceError.invalidStatusCode
         }
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -38,11 +38,27 @@ final class YelpApi {
         request.httpMethod = "GET"
         let (data, response) = try await URLSession.shared.data(for: request)
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-            throw serviceError.invalidStatusCode
+            throw ServiceError.invalidStatusCode
         }
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         let dataResults = try decoder.decode(SearchReviewResults.self, from: data)
         return dataResults.reviews
+    }
+
+    static func searchVeggiBusinessesDetails(query: String) async throws -> [WeekDetails] {
+        let apiPath = "/businesses/\(query)"
+        let url = URL(string: ApiUrl + apiPath)
+        var request = URLRequest(url: url!)
+        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            throw ServiceError.invalidStatusCode
+        }
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        let dataResults = try decoder.decode(BusinessDetails.self, from: data)
+        return dataResults.hours.weekDetails
     }
 }

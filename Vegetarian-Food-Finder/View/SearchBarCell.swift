@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchBarCell: UITableViewCell {
+final class SearchBarCell: UITableViewCell {
     @IBOutlet var restaurantNameLabel: UILabel!
     @IBOutlet var restaurantAddressLabel: UILabel!
     @IBOutlet var restaurantCategory: UILabel!

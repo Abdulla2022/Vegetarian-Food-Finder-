@@ -47,6 +47,24 @@ struct User: Codable {
     let name: String
 }
 
+struct BusinessDetails: Codable {
+    let id: String
+    let name: String
+    let hours: Open
+    let coordinates: Coordinates
+}
+
+struct Open: Codable {
+    let weekDetails: [WeekDetails]
+}
+
+struct WeekDetails: Codable {
+    let isOvernight: Bool
+    let start: String
+    let end: String
+    let day: Int
+}
+
 struct RestaurantScore {
     let priceZScore: Double
     let distanceZScore: Double

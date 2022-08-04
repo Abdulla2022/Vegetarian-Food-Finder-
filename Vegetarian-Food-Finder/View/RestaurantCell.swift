@@ -12,8 +12,6 @@ final class RestaurantCell: UITableViewCell {
     @IBOutlet var imageOfResturant: UIImageView!
     @IBOutlet var resturantAddress: UILabel!
     @IBOutlet var ratingOfResturant: UILabel!
-    @IBOutlet var likeBtn: UIButton!
-
     func configure(for restaurant: Business) {
         nameOfResturant.text = restaurant.name
         ratingOfResturant.text = "\(restaurant.rating)"

@@ -69,13 +69,12 @@ final class SearchViewController: UIViewController, UITableViewDataSource, UITab
         guard searchText != "" else {
             return restaurantList
         }
-        restaurantList = restaurantList.filter({ Business in
+        return restaurantList.filter({ Business in
             if searchText != "" {
                 let searchTextMatch = Business.name.lowercased().contains(searchText.lowercased())
                 return searchTextMatch
             }
             return true
         })
-        return restaurantList
     }
 }

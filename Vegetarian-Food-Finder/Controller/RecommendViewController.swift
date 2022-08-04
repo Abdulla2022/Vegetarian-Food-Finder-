@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RecommendViewController: UIViewController, StoryboardIdentifiable {
+final class RecommendViewController: UIViewController, StoryboardIdentifiable {
     var restaurantsList: [Business] = []
     var selectedRestaurant: RestaurantScore?
     @IBOutlet var distanceWeight: UILabel!

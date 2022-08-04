@@ -7,7 +7,7 @@ target 'Vegetarian-Food-Finder' do
   # Pods for Vegetarian-Food-Finder
   pod 'Parse'
   pod 'CLTypingLabel'
-
+  pod 'DropDown'
   target 'Vegetarian-Food-FinderTests' do
     inherit! :search_paths
     # Pods for testing
