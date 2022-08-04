@@ -7,7 +7,7 @@
 
 import UIKit
 
-class detailsCell: UITableViewCell {
+final class DetailsCell: UITableViewCell {
     @IBOutlet var userNameLabel: UILabel!
     @IBOutlet var createdDateLabel: UILabel!
     @IBOutlet var reviewTextLabel: UILabel!

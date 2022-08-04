@@ -10,7 +10,9 @@ import EventKitUI
 import UIKit
 
 final class CalendarViewController: DayViewController, EKEventEditViewDelegate {
-    private var eventStore = EKEventStore()
+    private lazy var eventStore: EKEventStore = {
+        EKEventStore()
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()

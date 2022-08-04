@@ -7,7 +7,7 @@
 import Foundation
 import Parse
 
-class LikedRestaurantPost: PFObject, PFSubclassing {
+final class LikedRestaurantPost: PFObject, PFSubclassing {
     @NSManaged var restaurantId: String
     @NSManaged var author: PFUser
 

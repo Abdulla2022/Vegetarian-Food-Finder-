@@ -9,8 +9,9 @@ import Contacts
 import Parse
 import UIKit
 
-class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+final class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var selectedRestaurant: Business?
+    private let detailsToDatePicker = "fromDetailsToDatePicker"
     private let detailsCell = "detailsCell"
     @IBOutlet var nameOfResturant: UILabel!
     @IBOutlet var imageOfResturant: UIImageView!
@@ -39,30 +40,6 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         getResturantsReviewData(query: selectedRestaurant!.id) { restaurant in
             self.restaurantReviewData = restaurant
         }
-
-//        checkPostStatus()
-    }
-
-//    func checkPostStatus() {
-//        let query = PFQuery(className: "ParsePost")
-//        query.findObjectsInBackground { [weak self] post, _ in
-//            if let post = post {
-//                self?.likeBtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-//                self?.likeBtn.tintColor = .red
-//            }
-//            self?.showOkActionAlert(withTitle: "Faild", andMessage: "Faild to get the data from Parse")
-//        }
-//    }
-
-    @IBAction func didTapLike(_ sender: Any) {
-        if isLiked == true {
-            likeBtn.setImage(UIImage(systemName: "heart"), for: .normal)
-            isLiked = false
-            return
-        }
-        likeBtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-        likeBtn.tintColor = .red
-        isLiked = true
     }
 
     func formattedAddress() -> String {
@@ -90,14 +67,23 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         category.text = restaurant.categories?[1].title
         phoneNumberLabel.setTitle("\(restaurant.phone)", for: .normal)
     }
-
-    @IBAction func phoneNumberPressed(_ sender: Any) {
+    
+    @IBAction func didTapLike(_ sender: Any) {
+        if isLiked == true {
+            likeBtn.setImage(UIImage(systemName: "heart"), for: .normal)
+            isLiked = false
+            return
+        }
+        likeBtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        likeBtn.tintColor = .red
+        isLiked = true
     }
 
     @objc private func didDoubleTap(_ gesture: UITapGestureRecognizer) {
         guard let gestureView = gesture.view else {
             return
         }
+        isLiked = true
         let sideLength = gestureView.frame.size.width / 4
         let heart = UIImageView(image: UIImage(systemName: "heart.fill"))
         heart.frame = CGRect(
@@ -113,12 +99,14 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             }, completion: { done in
                 if done {
                     heart.removeFromSuperview()
-                    self.isLiked = true
                     self.likeBtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
                     self.likeBtn.tintColor = .red
                 }
             })
         })
+    }
+
+    @IBAction func phoneNumberPressed(_ sender: Any) {
     }
 
     func getResturantsReviewData(query: String, completion: @escaping ([BusinessReview]) -> Void) {
@@ -133,7 +121,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: detailsCell, for: indexPath) as! detailsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: detailsCell, for: indexPath) as! DetailsCell
         let thisRestaurantReview = restaurantReviewData[indexPath.row]
         cell.configureReview(for: thisRestaurantReview)
         return cell
