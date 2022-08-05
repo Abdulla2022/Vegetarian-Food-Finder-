@@ -46,7 +46,7 @@ final class YelpApi {
         return dataResults.reviews
     }
 
-    static func searchVeggiBusinessesDetails(query: String) async throws -> [WeekDetails] {
+    static func searchVeggiBusinessesDetails(query: String) async throws -> BusinessDetails {
         let apiPath = "/businesses/\(query)"
         let url = URL(string: ApiUrl + apiPath)
         var request = URLRequest(url: url!)
@@ -59,6 +59,6 @@ final class YelpApi {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         let dataResults = try decoder.decode(BusinessDetails.self, from: data)
-        return dataResults.hours.weekDetails
+        return dataResults
     }
 }

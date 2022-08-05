@@ -23,12 +23,15 @@ final class DetailsViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet var phoneNumberLabel: UIButton!
     @IBOutlet var likeBtn: UIButton!
     var isLiked: Bool = false
+    var likedRestaurnats = [LikedRestaurantPost]()
+    var restaurantDetails:BusinessDetails?
     var restaurantReviewData: [BusinessReview] = [] {
         didSet {
             tableView.reloadData()
         }
     }
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -37,11 +40,14 @@ final class DetailsViewController: UIViewController, UITableViewDelegate, UITabl
         let doubleTap = UITapGestureRecognizer(target: self, action: #selector(didDoubleTap(_:)))
         doubleTap.numberOfTapsRequired = 2
         imageOfResturant.addGestureRecognizer(doubleTap)
-        getResturantsReviewData(query: selectedRestaurant!.id) { restaurant in
-            self.restaurantReviewData = restaurant
+        getResturantsReviewData(query: selectedRestaurant!.id) { restaurantReviewDetails in
+            self.restaurantReviewData = restaurantReviewDetails
+        }
+        getResturantsDetails(query: selectedRestaurant!.id) { restaurantDetails in
+            self.restaurantDetails = restaurantDetails
         }
     }
-
+    
     func formattedAddress() -> String {
         let formatter = CNPostalAddressFormatter()
         let address = CNMutablePostalAddress()
@@ -54,7 +60,7 @@ final class DetailsViewController: UIViewController, UITableViewDelegate, UITabl
         address.country = (restaurant.location.country)
         return formatter.string(from: address)
     }
-
+    
     private func configureRestaurnat() {
         guard let restaurant = selectedRestaurant else {
             return
@@ -67,23 +73,65 @@ final class DetailsViewController: UIViewController, UITableViewDelegate, UITabl
         category.text = restaurant.categories?[1].title
         phoneNumberLabel.setTitle("\(restaurant.phone)", for: .normal)
     }
-    
+    // stil  working on this 
     @IBAction func didTapLike(_ sender: Any) {
-        if isLiked == true {
-            likeBtn.setImage(UIImage(systemName: "heart"), for: .normal)
-            isLiked = false
+        let isPosted = checkPostStatus()
+        guard let selectedRestaurant = selectedRestaurant else {
             return
         }
+        if (isLiked == true) || (isPosted == true) {
+            LikedRestaurantPost.deletLikedRestaurant(selectedRestaurant) { succeded, error in
+                if succeded {
+                }else {
+                    self.showOkActionAlert(withTitle: "faild", andMessage: "faild to delete the liked restaurant")
+                }
+            }
+            likeBtn.setImage(UIImage(systemName: "heart"), for: .normal)
+            isLiked = false
+        }
+            LikedRestaurantPost.postLikedRestaurant(selectedRestaurant) { succeeded, error in
+                if succeeded {
+                } else {
+                    self.showOkActionAlert(withTitle: "faild", andMessage: "faild to post To parse after hitting the like button")
+                }
+            }
         likeBtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         likeBtn.tintColor = .red
         isLiked = true
+        return
     }
-
+    
+    func checkPostStatus() -> Bool{
+        let query = PFQuery(className: "LikedRestaurantPost")
+        query.findObjectsInBackground { [weak self] post, _ in
+            self?.likedRestaurnats = post as! [LikedRestaurantPost]
+        }
+        for likedRestaurantObj in self.likedRestaurnats {
+            if (likedRestaurantObj.restaurantId == self.selectedRestaurant?.id) &&
+                (likedRestaurantObj.author == PFUser.current()) {
+                return true
+            }
+        }
+        return false
+    }
+    
     @objc private func didDoubleTap(_ gesture: UITapGestureRecognizer) {
         guard let gestureView = gesture.view else {
             return
         }
-        isLiked = true
+        guard let selectedRestaurant = selectedRestaurant else {
+            return
+        }
+        let isPosted = checkPostStatus()
+        if isPosted == false {
+            LikedRestaurantPost.postLikedRestaurant(selectedRestaurant) { succeeded, error in
+                if succeeded {
+                    self.isLiked = true
+                } else {
+                    self.showOkActionAlert(withTitle: "faild", andMessage: "faild to post To parse after checking that it's not pushed")
+                }
+            }
+        }
         let sideLength = gestureView.frame.size.width / 4
         let heart = UIImageView(image: UIImage(systemName: "heart.fill"))
         heart.frame = CGRect(
@@ -105,10 +153,10 @@ final class DetailsViewController: UIViewController, UITableViewDelegate, UITabl
             })
         })
     }
-
+    
     @IBAction func phoneNumberPressed(_ sender: Any) {
     }
-
+    
     func getResturantsReviewData(query: String, completion: @escaping ([BusinessReview]) -> Void) {
         Task {
             do {
@@ -119,15 +167,36 @@ final class DetailsViewController: UIViewController, UITableViewDelegate, UITabl
             }
         }
     }
-
+    
+    func getResturantsDetails(query: String, completion: @escaping (BusinessDetails) -> Void) {
+        Task {
+            do {
+                let restaurantList: BusinessDetails = try await YelpApi.searchVeggiBusinessesDetails(query: query)
+                completion(restaurantList)
+            } catch {
+                showOkActionAlert(withTitle: "Can't get the data of details", andMessage: "the server cannot process the request")
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: detailsCell, for: indexPath) as! DetailsCell
         let thisRestaurantReview = restaurantReviewData[indexPath.row]
         cell.configureReview(for: thisRestaurantReview)
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurantReviewData.count
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == detailsToDatePicker {
+            let DatePickerVC = segue.destination as? DatePickerViewController
+            if let restaurantDetails = restaurantDetails {
+                DatePickerVC?.restaurantDetails = restaurantDetails
+                
+            }
+        }
     }
 }

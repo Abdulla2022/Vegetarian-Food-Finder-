@@ -15,7 +15,7 @@ final class LikedRestaurantPost: PFObject, PFSubclassing {
         return "LikedRestaurantPost"
     }
 
-    func postLikedRestaurant(
+    class func postLikedRestaurant(
         _ restaurnt: Business,
         withCompletion completion: PFBooleanResultBlock?
     ) {
@@ -23,5 +23,15 @@ final class LikedRestaurantPost: PFObject, PFSubclassing {
         newPost.restaurantId = restaurnt.id
         newPost.author = PFUser.current()!
         newPost.saveInBackground()
+    }
+    
+    class func deletLikedRestaurant(
+        _ restaurnt: Business,
+        withCompletion completion: PFBooleanResultBlock?
+    ) {
+        let newPost = LikedRestaurantPost()
+        newPost.restaurantId = restaurnt.id
+        newPost.author = PFUser.current()!
+        newPost.deleteInBackground()
     }
 }
