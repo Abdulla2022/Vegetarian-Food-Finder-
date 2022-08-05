@@ -8,6 +8,7 @@
 import UIKit
 
 class DatePickerViewController: UIViewController {
+    var restaurantDetails: BusinessDetails?
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var datePicker: UIDatePicker!
     override func viewDidLoad() {
@@ -30,14 +31,19 @@ class DatePickerViewController: UIViewController {
         datePicker.minimumDate = Date()
     }
 
-    @objc func dateChange(datePicker: UIDatePicker) {
+    @objc func dateChange(datePicker: UIDatePicker){
+        let date = fomateDate()
+        dateLabel.text = date
+    }
+    
+    func fomateDate() -> String{
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         let date = dateFormatter.string(from: datePicker.date)
-        dateLabel.text = date
+        return date
     }
-
+    
     @IBAction func userTimeZoneBtn(_ sender: Any) {
     }
 
