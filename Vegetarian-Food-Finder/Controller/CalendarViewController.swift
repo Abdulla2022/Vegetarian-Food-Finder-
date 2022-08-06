@@ -2,15 +2,18 @@
 //  CalendarViewController.swift
 //  Vegetarian-Food-Finder
 //
-//  Created by Abdullahi Ahmed on 7/27/22.
-//
+//  This File was taken from https://github.com/richardtop/CalendarApp .
+//  link to the file https://github.com/richardtop/CalendarApp/blob/master/Calendar/CalendarViewController.swift
+
 import CalendarKit
 import EventKit
 import EventKitUI
 import UIKit
 
 final class CalendarViewController: DayViewController, EKEventEditViewDelegate {
-    private lazy var eventStore: EKEventStore = {
+    var visitStartTime: Date?
+    var visitEndTime: Date?
+    lazy var eventStore: EKEventStore = {
         EKEventStore()
     }()
 
@@ -19,8 +22,8 @@ final class CalendarViewController: DayViewController, EKEventEditViewDelegate {
         title = "Calendar"
         requestAccessToCalendar()
         subscribeToNotifications()
+        createRestaurantEvent()
     }
-
     private func requestAccessToCalendar() {
         eventStore.requestAccess(to: .event) { [weak self] _, _ in
             DispatchQueue.main.async {
