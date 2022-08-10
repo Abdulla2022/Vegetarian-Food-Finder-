@@ -14,7 +14,7 @@ final class DetailsViewController: UIViewController, UITableViewDelegate, UITabl
     private let detailsToDatePicker = "fromDetailsToDatePicker"
     private let detailsCell = "detailsCell"
     @IBOutlet var nameOfResturant: UILabel!
-    @IBOutlet var imageOfResturant: UIImageView!
+    @IBOutlet var imageofRestaurant: UIImageView!
     @IBOutlet var resturantAddress: UILabel!
     @IBOutlet var ratingOfResturant: UILabel!
     @IBOutlet var reviewCountOfRestaurant: UILabel!
@@ -39,7 +39,7 @@ final class DetailsViewController: UIViewController, UITableViewDelegate, UITabl
         configureRestaurnat()
         let doubleTap = UITapGestureRecognizer(target: self, action: #selector(didDoubleTap(_:)))
         doubleTap.numberOfTapsRequired = 2
-        imageOfResturant.addGestureRecognizer(doubleTap)
+        imageofRestaurant.addGestureRecognizer(doubleTap)
         getResturantsReviewData(query: selectedRestaurant!.id) { restaurantReviewDetails in
             self.restaurantReviewData = restaurantReviewDetails
         }
@@ -68,7 +68,7 @@ final class DetailsViewController: UIViewController, UITableViewDelegate, UITabl
         nameOfResturant.text = restaurant.name
         ratingOfResturant.text = "\(restaurant.rating)"
         resturantAddress.text = formattedAddress()
-        imageOfResturant.load(url: restaurant.imageUrl)
+        imageofRestaurant.load(url: restaurant.imageUrl)
         reviewCountOfRestaurant.text = "\(restaurant.reviewCount)"
         category.text = restaurant.categories?[1].title
         phoneNumberLabel.setTitle("\(restaurant.phone)", for: .normal)
