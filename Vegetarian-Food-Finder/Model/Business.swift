@@ -49,12 +49,17 @@ struct User: Codable {
 
 struct BusinessDetails: Codable {
     let id: String
+    let name: String
+    let displayPhone: String
+    let imageUrl: URL
+    let rating: Double
+    let location: Location
     let hours: [Hours]
-    let Coordinates: Coordinates?
+    let coordinates: Coordinates?
     func checkIfOpenAt(_ pickedDate: Date) -> Bool {
         let selectedDate = Calendar.current.component(.weekday, from: pickedDate)
         var isOpen = false
-        for hour in hours{
+        for hour in hours {
             for daysOpen in hour.open {
                 guard daysOpen.day == selectedDate else {
                     continue
@@ -70,37 +75,38 @@ struct BusinessDetails: Codable {
 struct Hours: Codable {
     let open: [Open]
 }
-    struct Open: Codable {
-        let isOvernight: Bool
-        let start: String
-        let end: String
-        let day: Int
-    }
-    
-    struct RestaurantScore {
-        let priceZScore: Double
-        let distanceZScore: Double
-        let ratingZScore: Double
-        let totalZScore: Double
-        let restaurnt: Business
-    }
-    
-    struct Coordinates: Codable {
-        let latitude: Double
-        let longitude: Double
-    }
-    
-    struct Location: Codable {
-        let city: String
-        let country: String
-        let address2: String?
-        let address3: String?
-        let state: String
-        let address1: String
-        let zipCode: String
-    }
-    
-    struct Categories: Codable {
-        let alias: String
-        let title: String
-    }
+
+struct Open: Codable {
+    let isOvernight: Bool
+    let start: String
+    let end: String
+    let day: Int
+}
+
+struct RestaurantScore {
+    let priceZScore: Double
+    let distanceZScore: Double
+    let ratingZScore: Double
+    let totalZScore: Double
+    let restaurnt: Business
+}
+
+struct Coordinates: Codable {
+    let latitude: Double
+    let longitude: Double
+}
+
+struct Location: Codable {
+    let city: String
+    let country: String
+    let address2: String?
+    let address3: String?
+    let state: String
+    let address1: String
+    let zipCode: String
+}
+
+struct Categories: Codable {
+    let alias: String
+    let title: String
+}

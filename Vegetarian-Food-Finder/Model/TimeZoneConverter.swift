@@ -19,7 +19,7 @@ final class TimeZoneConverter {
      - parameter  completion handler: Gives back the TimeZone of the restaurant
 
      */
-    
+
     func fetchRestaurantTimezone(selectedRestaurant: BusinessDetails,
                                  completion: @escaping (TimeZone?, Error?) -> Void
     ) {
@@ -48,7 +48,7 @@ final class TimeZoneConverter {
 
      returns a tuple of Int(representing the Hour) and Int(representing the Minutes)
      */
-    
+
     func convertToTimeInt(
         timeString: String
     ) -> (hour: Int, minute: Int) {

@@ -10,14 +10,17 @@ import UIKit
 final class RecommendViewController: UIViewController, StoryboardIdentifiable {
     var restaurantsList: [Business] = []
     var selectedRestaurant: RestaurantScore?
+    @IBOutlet var reccommendBtnLabel: UIButton!
     @IBOutlet var distanceWeight: UILabel!
     @IBOutlet var ratingWeight: UILabel!
     @IBOutlet var priceWeight: UILabel!
     @IBOutlet var priceSlider: UISlider!
     @IBOutlet var ratingSlider: UISlider!
     @IBOutlet var distanceSlider: UISlider!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBtns(selectedBtn: reccommendBtnLabel)
     }
 
     @IBAction func priceSliderChanged(_ sender: UISlider) {

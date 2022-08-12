@@ -5,10 +5,11 @@
 //  Created by Abdullahi Ahmed on 7/5/22.
 //
 
+import MapKit
 import Parse
 import UIKit
-
 final class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, StoryboardIdentifiable {
+    @IBOutlet var reccommendBtnLabel: UIButton!
     private let resturantCell = "RestaurantCell"
     private let segueFromHomeToRecommedned = "segueFromHomeToRecommendView"
     let segueFromHomeToDetails = "SegueFromHomeToDetails"
@@ -24,7 +25,7 @@ final class HomeViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = UITableView.automaticDimension
+        setBtns(selectedBtn: reccommendBtnLabel)
         getResturantsData { restaurantsData in
             self.restaurantsList = restaurantsData
         }
@@ -50,12 +51,13 @@ final class HomeViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: resturantCell, for: indexPath) as! RestaurantCell
         let thisrestaurant = restaurantsList[indexPath.row]
+        cell.backgroundColor = .white
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 2
+        cell.layer.cornerRadius = 8
+        cell.clipsToBounds = true
         cell.configure(for: thisrestaurant)
         return cell
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: segueFromHomeToDetails, sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -72,5 +74,26 @@ final class HomeViewController: UIViewController, UITableViewDelegate, UITableVi
             let searchVc = navVc?.topViewController as? SearchViewController
             searchVc?.restaurantList = restaurantsList
         }
+    }
+
+    @IBAction func didTapDirections(_ sender: Any) {
+        let indexPath = tableView.indexPathForSelectedRow
+        guard let indexPath = indexPath else {
+            return
+        }
+        let selectedRestaurant = restaurantsList[indexPath.row]
+        guard let lat = selectedRestaurant.coordinates?.latitude,
+              let lon = selectedRestaurant.coordinates?.longitude
+        else {
+            return
+        }
+        let region: CLLocationDistance = 1000
+        let coordinates = CLLocationCoordinate2DMake(lat, lon)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: region, longitudinalMeters: region)
+        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
+        let placeMark = MKPlacemark(coordinate: coordinates)
+        let mapItem = MKMapItem(placemark: placeMark)
+        mapItem.name = "\(selectedRestaurant.name)"
+        mapItem.openInMaps(launchOptions: options)
     }
 }

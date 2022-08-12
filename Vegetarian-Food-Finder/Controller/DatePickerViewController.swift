@@ -10,8 +10,8 @@ import UIKit
 class DatePickerViewController: UIViewController, StoryboardIdentifiable {
     private let datePickerToCalendar = "fromDatePickerToCalendar"
     var restaurantDetails: BusinessDetails?
-    @IBOutlet var dateLabel: UILabel!
     @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet var creatEventLabel: UIButton!
     @IBOutlet var closingHoursLabel: UILabel!
     @IBOutlet var restaurantBasedClosingHourLabel: UILabel!
     @IBOutlet var restaurantBasedOpeningHourLabel: UILabel!
@@ -21,13 +21,13 @@ class DatePickerViewController: UIViewController, StoryboardIdentifiable {
         super.viewDidLoad()
         setdatePicker()
         fetchFormattedTime()
+        setBtns(selectedBtn: creatEventLabel)
     }
 
     @IBAction func btnSegPressed(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
-        case 0: datePicker.preferredDatePickerStyle = .compact
-        case 1: datePicker.preferredDatePickerStyle = .inline
-        case 2: datePicker.preferredDatePickerStyle = .wheels
+        case 0: datePicker.preferredDatePickerStyle = .inline
+        case 1: datePicker.preferredDatePickerStyle = .wheels
         default: break
         }
     }
@@ -44,8 +44,8 @@ class DatePickerViewController: UIViewController, StoryboardIdentifiable {
             return
         }
         DispatchQueue.main.async {
-            self.timeZoneConverter.convertRestaurantTimeToUsersTime(selectedRestaurant: restaurantDetails, choosenDate: self.datePicker.date) { userstartingTime, userEndingTime, restaurantStartingTime, restaurantEndingTime, _ in
-                if restaurantDetails.checkIfOpenAt(self.datePicker.date) {
+            self.timeZoneConverter.convertRestaurantTimeToUsersTime(selectedRestaurant: restaurantDetails, choosenDate: self.datePicker.date) { userstartingTime, userEndingTime, restaurantStartingTime, restaurantEndingTime, err in
+                if restaurantDetails.checkIfOpenAt(self.datePicker.date) && err == nil {
                     guard let userstartingTime = userstartingTime, let userEndingTime = userEndingTime, let restaurantStartingTime = restaurantStartingTime, let restaurantEndingTime = restaurantEndingTime else {
                         return
                     }
@@ -55,20 +55,19 @@ class DatePickerViewController: UIViewController, StoryboardIdentifiable {
                     self.restaurantBasedClosingHourLabel.text = restaurantEndingTime
                     return
                 }
-                self.openingHoursLabel.text = "Sorry we are closed today"
-                self.closingHoursLabel.text = "Sorry we are closed today"
-                self.restaurantBasedOpeningHourLabel.text = "Sorry we are closed today"
-                self.restaurantBasedClosingHourLabel.text = "Sorry we are closed today"
+                self.openingHoursLabel.text = "Sorry we are closed"
+                self.closingHoursLabel.text = "Sorry we are closed"
+                self.restaurantBasedOpeningHourLabel.text = "Sorry we are closed"
+                self.restaurantBasedClosingHourLabel.text = "Sorry we are closed"
             }
         }
     }
 
     @objc func dateChange(datePicker: UIDatePicker) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        let date = dateFormatter.string(from: datePicker.date)
         fetchFormattedTime()
-        dateLabel.text = date
+    }
+
+    @IBAction func didTapCalendarIcon(_ sender: Any) {
     }
 
     private func showCalendar(startingHours: Date?, endingHours: Date?) {

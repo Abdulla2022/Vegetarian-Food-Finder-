@@ -5,12 +5,37 @@
 //  Created by Abdullahi Ahmed on 7/5/22.
 //
 import Parse
+import TextFieldEffects
 import UIKit
+final class SignUpViewController: UIViewController, StoryboardIdentifiable, UITextFieldDelegate {
+    @IBOutlet var signUpPassword: YoshikoTextField!
 
-final class SignUpViewController: UIViewController, StoryboardIdentifiable {
-    @IBOutlet var signUpPassword: UITextField!
-    @IBOutlet var signUpEmail: UITextField!
-    @IBOutlet var signUpUserName: UITextField!
+    @IBOutlet var signUpEmail: YoshikoTextField!
+
+    @IBOutlet var signUpUserName: YoshikoTextField!
+
+    @IBOutlet var signUpOutlet: UIButton!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpViewConstrainsts()
+        setBtns(selectedBtn: signUpOutlet)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return false
+    }
+
+    func setUpViewConstrainsts() {
+        let imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = UIImage(named: "VeganWords")
+        imageView.center = view.center
+        view.addSubview(imageView)
+        view.sendSubviewToBack(imageView)
+    }
 
     @IBAction func didTapSignUp(_ sender: UIButton) {
         let newUser = PFUser()

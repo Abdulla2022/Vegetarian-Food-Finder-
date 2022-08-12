@@ -6,20 +6,25 @@
 //
 import CLTypingLabel
 import Parse
+import TextFieldEffects
 import UIKit
-
-final class LoginViewController: UIViewController, StoryboardIdentifiable {
+final class LoginViewController: UIViewController, StoryboardIdentifiable, UITextFieldDelegate {
     private let segueToSignUp = "SegueToSignUp"
-    @IBOutlet var loginUserName: UITextField!
+    @IBOutlet var loginUserName: KaedeTextField!
     @IBOutlet var loginPassword: UITextField!
-
-    @IBOutlet var veganFoodFinderLabel: CLTypingLabel!
-    @IBOutlet var welcomeLabel: CLTypingLabel!
+    @IBOutlet var loginOutlet: UIButton!
+    @IBOutlet var signUpOutlet: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = "Welcome To"
-        veganFoodFinderLabel.text = "Vegan Food Finder"
+        setBtns(selectedBtn: signUpOutlet)
+        setBtns(selectedBtn: loginOutlet)
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "grassBackground")!)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return false
     }
 
     @IBAction func didTapSignUp(_ sender: UIButton) {

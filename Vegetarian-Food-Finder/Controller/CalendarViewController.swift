@@ -22,8 +22,8 @@ final class CalendarViewController: DayViewController, EKEventEditViewDelegate {
         title = "Calendar"
         requestAccessToCalendar()
         subscribeToNotifications()
-        createRestaurantEvent()
     }
+
     private func requestAccessToCalendar() {
         eventStore.requestAccess(to: .event) { [weak self] _, _ in
             DispatchQueue.main.async {

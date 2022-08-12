@@ -5,8 +5,8 @@
 //  Created by Abdullahi Ahmed on 7/12/22.
 //
 
+import Contacts
 import UIKit
-
 final class SearchBarCell: UITableViewCell {
     @IBOutlet var restaurantNameLabel: UILabel!
     @IBOutlet var restaurantAddressLabel: UILabel!
@@ -17,14 +17,20 @@ final class SearchBarCell: UITableViewCell {
 
     func configure(for restaurant: Business) {
         restaurantNameLabel.text = restaurant.name
-        restaurantRating.text = "\(restaurant.rating)"
-        let address = restaurant.location.address1
-        let state = restaurant.location.state
-        let city = restaurant.location.city
-        let zipCode = restaurant.location.zipCode
-        let country = restaurant.location.country
-        restaurantAddressLabel.text = "\(address),\(city),\(zipCode),\(state),\(country)"
+        restaurantRating.text = "Rating: \(restaurant.rating)"
+        let address = formattedAddress(selectedRestaurant: restaurant)
+        restaurantAddressLabel.text = address
         restaurantImage.load(url: restaurant.imageUrl)
-        resturantReviewCount.text = "\(restaurant.reviewCount)"
+        resturantReviewCount.text = "Reviews \(restaurant.reviewCount)"
+    }
+
+    func formattedAddress(selectedRestaurant: Business) -> String {
+        let formatter = CNPostalAddressFormatter()
+        let address = CNMutablePostalAddress()
+        address.street = (selectedRestaurant.location.address1)
+        address.postalCode = (selectedRestaurant.location.zipCode)
+        address.city = (selectedRestaurant.location.city)
+        address.country = (selectedRestaurant.location.country)
+        return formatter.string(from: address)
     }
 }

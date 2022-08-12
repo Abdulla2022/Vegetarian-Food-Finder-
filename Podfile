@@ -7,7 +7,8 @@ target 'Vegetarian-Food-Finder' do
   # Pods for Vegetarian-Food-Finder
   pod 'Parse'
   pod 'CLTypingLabel'
-  pod 'DropDown'
+  pod 'TextFieldEffects'
+  pod 'ParseLiveQuery'
   target 'Vegetarian-Food-FinderTests' do
     inherit! :search_paths
     # Pods for testing

@@ -13,7 +13,8 @@ final class SearchViewController: UIViewController, UITableViewDataSource, UITab
     let searchController = UISearchController()
     var restaurantList: [Business] = []
     var activeRestaurantsList: [Business] {
-        filterForTextSearch(searchText: searchController.searchBar.text ?? "")
+        let scopeString = searchController.searchBar.scopeButtonTitles![searchController.searchBar.selectedScopeButtonIndex]
+        return filterForTextSearch(searchText: searchController.searchBar.text ?? "", scopeButtonText: scopeString)
     }
 
     override func viewDidLoad() {
@@ -34,6 +35,7 @@ final class SearchViewController: UIViewController, UITableViewDataSource, UITab
         definesPresentationContext = true
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.scopeButtonTitles = ["All", "Top Rated", "Affordable", "Near by"]
         searchController.searchBar.delegate = self
     }
 
@@ -46,10 +48,6 @@ final class SearchViewController: UIViewController, UITableViewDataSource, UITab
         let thisRestaurant = activeRestaurantsList[indexPath.row]
         cell.configure(for: thisRestaurant)
         return cell
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: segueFromSearchToDetails, sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -65,16 +63,55 @@ final class SearchViewController: UIViewController, UITableViewDataSource, UITab
         tableView.reloadData()
     }
 
-    func filterForTextSearch(searchText: String) -> [Business] {
-        guard searchText != "" else {
-            return restaurantList
+    func filterForTextSearch(searchText: String, scopeButtonText: String = "All") -> [Business] {
+        if searchText == "" {
+            return filterWithScopeButton(searchFilteredBusiness: restaurantList, scopeButton: Self.FilterType(rawValue: scopeButtonText) ?? .all)
         }
-        return restaurantList.filter({ Business in
-            if searchText != "" {
-                let searchTextMatch = Business.name.lowercased().contains(searchText.lowercased())
-                return searchTextMatch
-            }
-            return true
-        })
+        let searchFilteredBusiness = restaurantList.filter { business in
+            business.name.lowercased().contains(searchText.lowercased())
+        }
+        return filterWithScopeButton(searchFilteredBusiness: searchFilteredBusiness, scopeButton: SearchViewController.FilterType(rawValue: scopeButtonText) ?? .all)
+    }
+
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        tableView.reloadData()
+    }
+
+    enum FilterType: String {
+        case all = "All"
+        case topRated = "Top Rated"
+        case nearBy = "Near by"
+        case affordable = "Affordable"
+    }
+
+    func filterWithScopeButton(searchFilteredBusiness: [Business], scopeButton: FilterType) -> [Business] {
+        switch scopeButton {
+        case FilterType.all:
+            return searchFilteredBusiness
+        case .topRated:
+            return filterTopRatedBusiness(businessess: searchFilteredBusiness)
+        case .nearBy:
+            return filterNearByBusiness(businessess: searchFilteredBusiness)
+        case .affordable:
+            return filterAffordableBusiness(businessess: searchFilteredBusiness)
+        }
+    }
+
+    func filterTopRatedBusiness(businessess: [Business]) -> [Business] {
+        return businessess.filter { business in
+            business.rating >= 4.0
+        }
+    }
+
+    func filterNearByBusiness(businessess: [Business]) -> [Business] {
+        return businessess.filter { business in
+            business.distance <= 1500
+        }
+    }
+
+    func filterAffordableBusiness(businessess: [Business]) -> [Business] {
+        return businessess.filter { business in
+            business.priceValue <= 2
+        }
     }
 }

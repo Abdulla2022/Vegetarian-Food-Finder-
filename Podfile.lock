@@ -1,30 +1,43 @@
 PODS:
+  - Bolts-Swift (1.5.0)
   - Bolts/Tasks (1.9.1)
   - CLTypingLabel (0.3.0)
-  - DropDown (2.3.13)
   - Parse (1.19.3):
     - Parse/Core (= 1.19.3)
   - Parse/Core (1.19.3):
     - Bolts/Tasks (= 1.9.1)
+  - ParseLiveQuery (2.8.1):
+    - Bolts-Swift (~> 1.5.0)
+    - Parse (~> 1.19.0)
+    - Starscream (~> 4.0.4)
+  - Starscream (4.0.4)
+  - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
   - CLTypingLabel
-  - DropDown
   - Parse
+  - ParseLiveQuery
+  - TextFieldEffects
 
 SPEC REPOS:
   trunk:
     - Bolts
+    - Bolts-Swift
     - CLTypingLabel
-    - DropDown
     - Parse
+    - ParseLiveQuery
+    - Starscream
+    - TextFieldEffects
 
 SPEC CHECKSUMS:
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
+  Bolts-Swift: afbbaf8c8186e7f769be4afa656949c14087ba44
   CLTypingLabel: e5f3adf9467a38664a505e6475c23946c3b3c424
-  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
+  ParseLiveQuery: 7bc437c3b986880ffe5f241a9921e37f45df0677
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 72628abdcbb98fde841472f9e696182516d9f542
+PODFILE CHECKSUM: 36f0b8807c852833b7de434ea6714eb23a0ffbef
 
 COCOAPODS: 1.11.3
